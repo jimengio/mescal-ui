@@ -99,6 +99,12 @@ export let genRouter = {
     path: () => `/navigator-select`,
     go: () => switchPath(`/navigator-select`),
   },
+  navHeader: {
+    name: "nav-header",
+    raw: "nav-header",
+    path: () => `/nav-header`,
+    go: () => switchPath(`/nav-header`),
+  },
   _: {
     name: "home",
     raw: "",

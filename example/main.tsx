@@ -3,6 +3,7 @@ import React from "react";
 import "./main.css";
 
 import "antd-mobile/dist/antd-mobile.css";
+import "font-awesome/css/font-awesome.min.css";
 
 import { parseRoutePath, IRouteParseResult } from "@jimengio/ruled-router";
 
@@ -25,7 +26,7 @@ window.addEventListener("hashchange", () => {
 declare var module: any;
 
 if (module.hot) {
-  module.hot.accept([], () => {
+  module.hot.accept(["./pages/container"], () => {
     renderApp();
   });
 }

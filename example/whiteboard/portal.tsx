@@ -21,6 +21,7 @@ import DemoTrees from "./demo-trees";
 import { DemoSwitchOkNg } from "./demo-switch-ok-ng";
 import { DemoNavigatorPage } from "./demo-navigator-page";
 import { DemoNavigatorSelect } from "./demo-navigator-select";
+import DemoNavHeader from "./demo-nav-header";
 
 interface IProps {
   router: IRouteParseResult;
@@ -57,6 +58,7 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
             {this.renderEntry("Switch Ok Ng", routePage.switchOkNg.go)}
             {this.renderEntry("Navigator Page", routePage.navigatorPage.go)}
             {this.renderEntry("Navigator Select", routePage.navigatorSelect.go)}
+            {this.renderEntry("Nav Header", routePage.navHeader.go)}
 
             <div className={styleTitle}>Tables</div>
 
@@ -100,6 +102,8 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
           return <DemoNavigatorPage />;
         case Nav.DemoNavigatorSelect:
           return <DemoNavigatorSelect />;
+        case Nav.DemoNavHeader:
+          return <DemoNavHeader />;
         default:
           return <div>{`Invalid router name: ${router.name}`}</div>;
       }

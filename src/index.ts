@@ -33,6 +33,10 @@ export { default as SelectSopup } from "./select-popup";
 export { default as TextareaPopup } from "./textarea-popup";
 export { default as TreeSelecPopup } from "./tree-select-popup";
 
+// header
+
+export { default as NavHeader } from "./nav-header";
+
 // others
 export { default as ArrowBack } from "./arrow-back";
 export { default as CardFormLayout } from "./card-form-layout";

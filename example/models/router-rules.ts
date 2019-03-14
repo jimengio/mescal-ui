@@ -44,6 +44,7 @@ export enum Nav {
   DemoSwitchOkNg = "switch-ok-ng",
   DemoNavigatorPage = "navigator-page",
   DemoNavigatorSelect = "navigator-select",
+  DemoNavHeader = "nav-header",
 }
 
 export const routerRules: IRouteRule[] = [
@@ -62,6 +63,7 @@ export const routerRules: IRouteRule[] = [
   { path: Nav.DemoSwitchOkNg },
   { path: Nav.DemoNavigatorPage },
   { path: Nav.DemoNavigatorSelect },
+  { path: Nav.DemoNavHeader },
   { path: "", name: Nav.Home },
 ];
 
