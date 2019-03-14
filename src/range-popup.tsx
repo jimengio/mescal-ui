@@ -7,6 +7,7 @@ import ThinButton from "./thin-button";
 import Space from "./space";
 import { row, rowParted, column } from "@jimengio/shared-utils";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
+import { Lingual } from "./lingual";
 
 interface IProps {
   timeFrom: string;
@@ -91,7 +92,7 @@ export default class RangePopup extends React.Component<IProps, IState> {
           <Space height={8} />
           <div className={rowParted}>
             <ThinButton
-              text={"lang.pickNow"}
+              text={<Lingual text="pickNow" />}
               onClick={() => {
                 this.immerState((state) => {
                   if (state.focused === "timeFrom") {
@@ -134,12 +135,12 @@ export default class RangePopup extends React.Component<IProps, IState> {
                   this.props.onChange(null, null);
                 }}
               >
-                {"lang.clear"}
+                <Lingual text="clear" />
               </ThinButton>
 
               <Space width={16} />
               <ThinButton disabled={!this.hasValue()} type="primary" className={styleButton} onClick={this.onSubmit}>
-                {"lang.submit"}
+                <Lingual text="submit" />
               </ThinButton>
             </div>
           </div>
@@ -178,7 +179,7 @@ export default class RangePopup extends React.Component<IProps, IState> {
   }
 
   renderEmpty() {
-    return <span className={styleEmpty}>{"lang.pleaseSelect"}</span>;
+    return <Lingual text={"pleaseSelect"} className={styleEmpty} />;
   }
 
   renderDate(x) {

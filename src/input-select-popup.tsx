@@ -9,10 +9,7 @@ import ThinButton from "./thin-button";
 import FaIcon, { IconName } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import ThinDivider from "./thin-divider";
-
-// TODO
-let lang: any = {};
-let formatString: any = () => {};
+import { Lingual, lingual } from "./lingual";
 
 let found = (x: string, y: string) => {
   return x.toLocaleLowerCase().includes((y || "").trim().toLowerCase());
@@ -62,7 +59,7 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.state.isEditing ? styleOutline : null, this.props.disabled ? styleDisabled : null)}
         onClick={() => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || lang.inputIsDisabled);
+            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             console.warn("TODO");
             return;
           }
@@ -80,11 +77,13 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
           </div>
         ) : (
           <div className={styleEmpty} style={{ textAlign: atRight ? "right" : "left" }}>
-            {this.props.placeholder != null
-              ? this.props.placeholder
-              : _.isEmpty(options)
-              ? lang.noCandidates
-              : formatString(lang.xCandidates, { x: options.length })}
+            {this.props.placeholder != null ? (
+              this.props.placeholder
+            ) : _.isEmpty(options) ? (
+              <Lingual text="noCandidates" />
+            ) : (
+              <Lingual text="xCandidates" replaceData={{ x: options.length }} />
+            )}
             <Space width={8} />
             <FaIcon name={IconName.AngleDown} />
           </div>
@@ -120,15 +119,15 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
           }}
         >
           <div className={rowParted}>
-            {this.props.guideText || lang.pleaseSelect}
+            {this.props.guideText || <Lingual text="pleaseSelect" />}
 
-            {!this.props.noClear ? <ThinButton onClick={this.onClear} text={lang.clear} /> : null}
+            {!this.props.noClear ? <ThinButton onClick={this.onClear} text={<Lingual text="clear" />} /> : null}
           </div>
 
           <Space height={8} />
           <input
             value={this.state.draft || undefined}
-            placeholder={lang.inputManually}
+            placeholder={lingual.inputManually}
             onChange={(event) => {
               let text = event.target.value;
               this.immerState((state) => {
@@ -183,7 +182,7 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
           <Space height={8} />
           <div className={rowParted}>
             <span />
-            <ThinButton type="primary" text={lang.submit} onClick={this.onSubmit} />
+            <ThinButton type="primary" text={<Lingual text="submit" />} onClick={this.onSubmit} />
           </div>
         </div>
       </div>
@@ -191,7 +190,7 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
   }
 
   renderEmpty() {
-    return <span className={styleEmpty}>{lang.nothingToSelect}</span>;
+    return <Lingual text="nothingToSelect" className={styleEmpty} />;
   }
 
   onSubmit = () => {

@@ -6,6 +6,7 @@ import { rowParted, row, center, column } from "@jimengio/shared-utils";
 import Space from "./space";
 import ThinButton from "./thin-button";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
+import { Lingual, lingual } from "./lingual";
 
 interface IProps {
   value: string;
@@ -44,7 +45,7 @@ export default class InputPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.props.disabled ? styleDisabled : null, this.state.isEditing ? styleOutline : null)}
         onClick={async () => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || "lang.inputIsDisabled");
+            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             console.warn("TODO");
             return;
           }
@@ -61,7 +62,7 @@ export default class InputPopup extends React.Component<IProps, IState> {
           </div>
         ) : (
           <div className={styleEmpty} style={{ textAlign: atRight ? "right" : "left" }}>
-            {this.props.placeholder || "lang.pleaseInput"}
+            {this.props.placeholder || <Lingual text="pleaseSelect" />}
           </div>
         )}
 
@@ -89,7 +90,7 @@ export default class InputPopup extends React.Component<IProps, IState> {
         >
           <input
             value={this.state.draft}
-            placeholder={this.props.placeholder || "lang.pleaseInput"}
+            placeholder={this.props.placeholder || lingual.pleaseInput}
             ref={(el) => {
               this.inputEl = el;
             }}
@@ -110,7 +111,7 @@ export default class InputPopup extends React.Component<IProps, IState> {
           <div className={rowParted}>
             <span />
             <ThinButton type="primary" className={styleButton} onClick={this.onSubmit}>
-              {"lang.save"}
+              {lingual.save}
             </ThinButton>
           </div>
         </div>

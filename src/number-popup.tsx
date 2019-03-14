@@ -8,6 +8,7 @@ import Space from "./space";
 import ThinButton from "./thin-button";
 import { numberOrEmpty } from "./utils/number";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
+import { Lingual, lingual } from "./lingual";
 
 interface IProps {
   value: number;
@@ -49,7 +50,7 @@ export default class NumberPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.state.isEditing ? styleOutline : null, this.props.disabled ? styleDisabled : null)}
         onClick={async () => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || lang.inputIsDisabled);
+            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             console.warn("TODO");
             return;
           }
@@ -66,7 +67,7 @@ export default class NumberPopup extends React.Component<IProps, IState> {
           </div>
         ) : (
           <div className={styleEmpty} style={{ textAlign: atRight ? "right" : "left" }}>
-            {this.props.placeholder || "lang.pleaseAddDigits"}
+            {this.props.placeholder || lingual.pleaseAddDigits}
           </div>
         )}
 
@@ -100,7 +101,7 @@ export default class NumberPopup extends React.Component<IProps, IState> {
             disabled={this.props.disabled}
             min={this.props.min}
             max={this.props.max}
-            placeholder={this.props.placeholder || "lang.pleaseAddDigits"}
+            placeholder={this.props.placeholder || lingual.pleaseAddDigits}
             ref={(el) => {
               this.inputEl = el;
             }}
@@ -130,10 +131,10 @@ export default class NumberPopup extends React.Component<IProps, IState> {
                     state.isEditing = false;
                   });
                 }}
-                text={"lang.cancel"}
+                text={<Lingual text="cancel" />}
               />
               <Space width={16} />
-              <ThinButton type="primary" className={styleButton} disabled={!validation.ok} onClick={this.onSubmit} text={"lang.save"} />
+              <ThinButton type="primary" className={styleButton} disabled={!validation.ok} onClick={this.onSubmit} text={<Lingual text="save" />} />
             </div>
           </div>
         </div>

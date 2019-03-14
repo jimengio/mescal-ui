@@ -8,11 +8,8 @@ import Space from "./space";
 import ThinButton from "./thin-button";
 import FaIcon, { IconName } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
+import { Lingual, formatString, lingual } from "./lingual";
 // import { showInfoAlertMessage } from "controllers/alert-message";
-
-// TODO
-let lang: any = {};
-let formatString: any = () => {};
 
 let found = (x: string, y: string) => {
   return x.toLocaleLowerCase().includes(y.trim().toLowerCase());
@@ -65,7 +62,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.state.isEditing ? styleOutline : null, this.props.disabled ? styleDisabled : null)}
         onClick={() => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || lang.inputIsDisabled);
+            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             console.warn("TODOFv");
             return;
           }
@@ -85,15 +82,15 @@ export default class SelectPopup extends React.Component<IProps, IState> {
     let { options, value, placeholder, isLoading } = this.props;
 
     if (isLoading) {
-      return this.renderValuePreview(styleEmpty, lang.loading);
+      return this.renderValuePreview(styleEmpty, <Lingual text="loading" />);
     } else if (value != null) {
       return this.renderValuePreview(styleValue, this.displayValue(value));
     } else if (placeholder != null) {
       return this.renderValuePreview(styleEmpty, placeholder);
     } else if (_.isEmpty(options)) {
-      return this.renderValuePreview(styleEmpty, lang.noCandidates);
+      return this.renderValuePreview(styleEmpty, <Lingual text="noCandidates" />);
     } else {
-      return this.renderValuePreview(styleEmpty, formatString(lang.xCandidates, { x: options.length }));
+      return this.renderValuePreview(styleEmpty, <Lingual text="xCandidates" replaceData={{ x: options.length }} />);
     }
   }
 
@@ -138,7 +135,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
           }}
         >
           <div className={rowParted}>
-            {this.props.guideText || lang.pleaseSelect}
+            {this.props.guideText || <Lingual text={"pleaseSelect"} />}
 
             {!this.props.noClear ? (
               <ThinButton
@@ -152,7 +149,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
                     });
                   }, 300);
                 }}
-                text={lang.clear}
+                text={<Lingual text="clear" />}
               />
             ) : null}
           </div>
@@ -207,7 +204,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
   }
 
   renderEmpty() {
-    return <span className={styleEmpty}>{lang.nothingToSelect}</span>;
+    return <Lingual text="nothingToSelect" className={styleEmpty} />;
   }
 
   renderInvalid(x) {
@@ -219,7 +216,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
       <div className={styleInputWrapper}>
         <input
           value={this.state.query}
-          placeholder={lang.search}
+          placeholder={lingual.search}
           className={styleInput}
           onChange={(event) => {
             let text = event.target.value;

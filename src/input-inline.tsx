@@ -4,6 +4,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 
 import _ from "lodash";
 import { scrollToElement } from "./utils/dom";
+import { lingual } from "./lingual";
 
 interface IProps {
   value: string;
@@ -38,7 +39,7 @@ export default class InputInline extends React.Component<IProps, IState> {
         style={{ textAlign: atRight ? "right" : "left" }}
         value={this.props.value}
         disabled={this.props.disabled}
-        placeholder={this.props.placeholder != null ? this.props.placeholder : "lang.pleaseInput"}
+        placeholder={this.props.placeholder != null ? this.props.placeholder : lingual.pleaseInput}
         onChange={(event) => {
           let text = event.target.value;
           this.props.onChange(text);

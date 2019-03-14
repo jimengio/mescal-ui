@@ -6,6 +6,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 import { rowParted, row, center, column } from "@jimengio/shared-utils";
 import { numberOrEmpty } from "./utils/number";
 import { scrollToElement } from "./utils/dom";
+import { lingual } from "./lingual";
 // import { showInfoAlertMessage } from "controllers/alert-message";
 
 interface IProps {
@@ -51,14 +52,14 @@ export default class NumberInline extends React.Component<IProps, IState> {
 
     return (
       <div className={styleValue} style={{ textAlign: atRight ? "right" : "left" }} onClick={this.onEdit}>
-        {value != null ? value : <span className={styleEmpty}>{this.props.placeholder || "lang.pleaseAddDigits"}</span>}
+        {value != null ? value : <span className={styleEmpty}>{this.props.placeholder || lingual.pleaseAddDigits}</span>}
       </div>
     );
   }
 
   onEdit = async () => {
     if (this.props.disabled) {
-      // showInfoAlertMessage(this.props.disabledMessage || lang.inputIsDisabled);
+      // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
       console.warn("TODO");
       return;
     }
@@ -70,7 +71,7 @@ export default class NumberInline extends React.Component<IProps, IState> {
     scrollToElement(this.inputEl);
   };
 
-  renderEditor() {
+  renderEditor = () => {
     let validation = _.isFunction(this.props.validate) ? this.props.validate(numberOrEmpty(this.state.draft)) : { ok: true, message: null };
     let { atRight } = this.props;
 
@@ -81,7 +82,7 @@ export default class NumberInline extends React.Component<IProps, IState> {
         disabled={this.props.disabled}
         min={this.props.min}
         max={this.props.max}
-        placeholder={this.props.placeholder || "lang.pleaseAddDigits"}
+        placeholder={this.props.placeholder || lingual.pleaseAddDigits}
         style={{ textAlign: atRight ? "right" : "left" }}
         ref={(el) => {
           this.inputEl = el;
@@ -107,7 +108,7 @@ export default class NumberInline extends React.Component<IProps, IState> {
         }}
       />
     );
-  }
+  };
 
   onSubmit = () => {
     let maybeNumber = this.findNumber(this.state.draft);

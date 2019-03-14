@@ -3,6 +3,7 @@ import { css, cx } from "emotion";
 import FaIcon, { IconName } from "@jimengio/fa-icons";
 import Space from "./space";
 import { row } from "@jimengio/shared-utils";
+import { Lingual } from "./lingual";
 
 interface IProps {
   title?: string;
@@ -17,7 +18,7 @@ export default class ArrowBack extends React.Component<IProps, IState> {
       <div className={cx(row, styleContainer)} onClick={this.props.onClick}>
         <FaIcon name={IconName.AngleLeft} />
         <Space width={12} />
-        <div>{this.props.title ? this.props.title : "lang.back"}</div>
+        <div>{this.props.title ? this.props.title : <Lingual text="back" />}</div>
       </div>
     );
   }

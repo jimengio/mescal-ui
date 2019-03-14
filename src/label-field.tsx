@@ -4,6 +4,7 @@ import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { rowParted, row, center } from "@jimengio/shared-utils";
 import Space from "./space";
+import { Lingual } from "./lingual";
 
 interface IProps {
   label?: string;
@@ -30,7 +31,7 @@ export default class LabelField extends React.Component<IProps, IState> {
     return (
       <div className={cx(rowParted, styleContainer, this.props.underline ? styleUnderline : null)}>
         <div className={cx(styleLabel)}>
-          {this.props.label || "lang.defaultLabel"}
+          {this.props.label || <Lingual text="defaultLabel" />}
           {this.props.isRequired ? this.renderRequired() : null}
           <Space width={16} />
           {this.props.scan}

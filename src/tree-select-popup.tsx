@@ -9,6 +9,7 @@ import ThinButton from "./thin-button";
 import FaIcon, { IconName } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Id } from "./models/types";
+import { Lingual, lingual } from "./lingual";
 
 // folding tree component
 
@@ -142,7 +143,7 @@ export default class TreeSelectPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.state.isEditing ? styleOutline : null, this.props.disabled ? styleDisabled : null)}
         onClick={() => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || lang.inputIsDisabled);
+            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             console.warn("TODO");
             return;
           }
@@ -162,15 +163,15 @@ export default class TreeSelectPopup extends React.Component<IProps, IState> {
     let { options, value, placeholder, isLoading } = this.props;
 
     if (isLoading) {
-      return this.renderValuePreview(styleEmpty, "lang.loading");
+      return this.renderValuePreview(styleEmpty, lingual.loading);
     } else if (value != null) {
       return this.renderValuePreview(styleValue, this.displayValue(value));
     } else if (placeholder != null) {
       return this.renderValuePreview(styleEmpty, placeholder);
     } else if (_.isEmpty(options)) {
-      return this.renderValuePreview(styleEmpty, "lang.noCandidates");
+      return this.renderValuePreview(styleEmpty, <Lingual text="noCandidates" />);
     } else {
-      return this.renderValuePreview(styleEmpty, "lang.pleaseSelect");
+      return this.renderValuePreview(styleEmpty, <Lingual text="pleaseSelect" />);
     }
   }
 
@@ -231,9 +232,9 @@ export default class TreeSelectPopup extends React.Component<IProps, IState> {
           }}
         >
           <div className={rowParted}>
-            {this.props.guideText || "lang.pleaseSelect"}
+            {this.props.guideText || <Lingual text="pleaseSelect" />}
 
-            {!this.props.noClear ? <ThinButton onClick={this.onClear} text={"lang.clear"} /> : null}
+            {!this.props.noClear ? <ThinButton onClick={this.onClear} text={<Lingual text="clear" />} /> : null}
           </div>
           <Space height={8} />
           {this.props.options.length > 0 ? (
@@ -263,7 +264,7 @@ export default class TreeSelectPopup extends React.Component<IProps, IState> {
   }
 
   renderEmpty() {
-    return <span className={styleEmpty}>{"lang.nothingToSelect"}</span>;
+    return <Lingual text="nothingToSelect" className={styleEmpty} />;
   }
 
   renderInvalid(x) {

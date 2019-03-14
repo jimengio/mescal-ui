@@ -2,6 +2,7 @@ import React from "react";
 import _ from "lodash";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { Lingual } from "./lingual";
 
 interface IProps {
   label?: string;
@@ -27,7 +28,7 @@ export default class LabelFieldVertical extends React.Component<IProps, IState> 
     return (
       <div className={styleContainer}>
         <div className={cx(styleLabel, this.props.normalSize ? null : styleSmaller)}>
-          {this.props.label || "lang.defaultLabel"}
+          {this.props.label || <Lingual text="defaultLabel" />}
           {this.props.isRequired ? this.renderRequired() : null}
         </div>
         {this.props.children}

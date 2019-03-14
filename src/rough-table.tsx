@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import produce from "immer";
 import { css, cx } from "emotion";
 import { center } from "@jimengio/shared-utils";
+import { Lingual } from "./lingual";
 
 interface IProps {
   className?: string;
@@ -47,7 +48,9 @@ export default class RoughTable extends React.Component<IProps, IState> {
             ) : (
               <tr>
                 <td className={styleTd} colSpan={this.props.labels.length}>
-                  <div className={cx(center, styleEmpty)}>{"lang.noData"}</div>
+                  <div className={cx(center, styleEmpty)}>
+                    <Lingual text="noData" />
+                  </div>
                 </td>
               </tr>
             )}

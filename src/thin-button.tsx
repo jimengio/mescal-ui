@@ -1,10 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { css, cx } from "emotion";
 import { center } from "@jimengio/shared-utils";
 import { EColorScheme } from "./utils/colors";
+import { Lingual } from "./lingual";
 
 interface IProps {
-  text?: string;
+  text?: ReactNode;
   type?: "primary" | "default";
   className?: string;
   disabled?: boolean;
@@ -15,7 +16,7 @@ interface IState {}
 
 export default class ThinButton extends React.Component<IProps, IState> {
   render() {
-    let text = this.props.text || this.props.children || "lang.confirm";
+    let text = this.props.text || this.props.children || <Lingual text="confirm" />;
 
     return (
       <button className={cx(center, styleButton, this.getStyle(), this.props.className)} onClick={this.onClick}>

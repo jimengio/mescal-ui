@@ -2,6 +2,7 @@ import React from "react";
 import { css, cx } from "emotion";
 import { center } from "@jimengio/shared-utils";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { Lingual } from "./lingual";
 
 interface IProps {
   text?: string;
@@ -21,7 +22,7 @@ export default class EmptyPlacehoder extends React.Component<IProps, IState> {
   mergeState = immerHelpers.mergeState as MergeStateFunc<IState>;
 
   render() {
-    return <div className={cx(center, styleContainer, this.props.className)}>{this.props.text || "lang.noData"}</div>;
+    return <div className={cx(center, styleContainer, this.props.className)}>{this.props.text || <Lingual text="noData" />}</div>;
   }
 }
 

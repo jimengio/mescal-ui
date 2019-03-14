@@ -3,6 +3,7 @@ import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import _ from "lodash";
 import { scrollToElement } from "./utils/dom";
+import { lingual } from "./lingual";
 
 interface IProps {
   value: string;
@@ -41,7 +42,7 @@ export default class TextareaInline extends React.Component<IProps, IState> {
         )}
         value={this.props.value}
         disabled={this.props.disabled}
-        placeholder={this.props.placeholder != null ? this.props.placeholder : "lang.pleaseInput"}
+        placeholder={this.props.placeholder != null ? this.props.placeholder : lingual.pleaseInput}
         onChange={(event) => {
           let text = event.target.value;
           this.props.onChange(text);

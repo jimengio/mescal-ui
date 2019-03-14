@@ -3,6 +3,7 @@ import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { center } from "@jimengio/shared-utils";
 import { EColorScheme } from "./utils/colors";
+import { Lingual } from "./lingual";
 
 interface IProps {
   text?: string;
@@ -25,7 +26,7 @@ export default class LargeButton extends React.Component<IProps, IState> {
   render() {
     return (
       <button onClick={this.props.onClick} className={cx(center, styleButton, this.props.className)}>
-        {this.props.text || "lang.defaultLabel"}
+        {this.props.text || <Lingual text="defaultLabel" />}
       </button>
     );
   }

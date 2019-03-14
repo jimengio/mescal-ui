@@ -3,6 +3,7 @@
 // To learn more https://github.com/beego/dev/issues/723#issuecomment-377137166
 
 import _ from "lodash";
+import { lingual } from "./lingual";
 
 export interface ISingleValidationResult {
   failed: boolean;
@@ -29,7 +30,7 @@ export type IValidationFields = IValidationFieldItems[];
 
 export const validationMethods = {
   required: (data): ISingleValidationResult => {
-    const defaultFailed = { failed: true, reason: "lang.httpRequired" };
+    const defaultFailed = { failed: true, reason: lingual.httpRequired };
 
     if (data == null) {
       return defaultFailed;
