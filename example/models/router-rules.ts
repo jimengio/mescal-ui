@@ -27,13 +27,14 @@ export enum Nav {
 
   // whiteboard
   Whiteboard = "whiteboard",
-  WhiteboardInputs = "inputs",
-  WhiteboardInputsInline = "inputs-inline",
-  WhiteboardRange = "range",
-  WhiteboardQrCode = "qrcode",
-  WhiteboardProgress = "progress",
-  WhiteboardSamplingCounter = "sampling-counter",
-  WhiteboardTrees = "trees",
+  DemoInputs = "inputs",
+  DemoInputsInline = "inputs-inline",
+  DemoRange = "range",
+  DemoQrCode = "qrcode",
+  DemoProgress = "progress",
+  DemoSamplingCounter = "sampling-counter",
+  DemoTrees = "trees",
+
   DemoTabsBar = "tabs-bar",
   DemoDataEntryRow = "data-entry-row",
   DemoButtons = "buttons",
@@ -43,13 +44,13 @@ export enum Nav {
 }
 
 export const routerRules: IRouteRule[] = [
-  { path: Nav.WhiteboardInputs },
-  { path: Nav.WhiteboardTrees },
-  { path: Nav.WhiteboardInputsInline },
-  { path: Nav.WhiteboardRange },
-  { path: Nav.WhiteboardQrCode },
-  { path: Nav.WhiteboardProgress },
-  { path: Nav.WhiteboardSamplingCounter },
+  { path: Nav.DemoInputs },
+  { path: Nav.DemoTrees },
+  { path: Nav.DemoInputsInline },
+  { path: Nav.DemoRange },
+  { path: Nav.DemoQrCode },
+  { path: Nav.DemoProgress },
+  { path: Nav.DemoSamplingCounter },
   { path: Nav.DemoDataEntryRow },
   { path: Nav.DemoButtons },
   { path: Nav.DemoPlaceholder },

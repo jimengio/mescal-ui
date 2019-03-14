@@ -65,19 +65,19 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
       );
     } else {
       switch (router.name) {
-        case Nav.WhiteboardInputs:
+        case Nav.DemoInputs:
           return <DemoInput />;
-        case Nav.WhiteboardTrees:
+        case Nav.DemoTrees:
           return <DemoTrees />;
-        case Nav.WhiteboardInputsInline:
+        case Nav.DemoInputsInline:
           return <WhiteboardDemoInputsInline />;
-        case Nav.WhiteboardRange:
+        case Nav.DemoRange:
           return <DemoRangePicker />;
-        case Nav.WhiteboardQrCode:
+        case Nav.DemoQrCode:
           return <DemoQrCode />;
-        case Nav.WhiteboardProgress:
+        case Nav.DemoProgress:
           return <DemoProgress />;
-        case Nav.WhiteboardSamplingCounter:
+        case Nav.DemoSamplingCounter:
           return <DemoSamplingCounter />;
         case Nav.DemoTabsBar:
           return <DemoTabsBar />;
