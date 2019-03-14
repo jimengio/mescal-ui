@@ -175,10 +175,10 @@
     immer "*"
     lodash "*"
 
-"@jimengio/shared-utils@^0.1.0-a3":
-  version "0.1.0-a3"
-  resolved "https://registry.yarnpkg.com/@jimengio/shared-utils/-/shared-utils-0.1.0-a3.tgz#7d27bcdb00a18f76ee5be7c4a8bd6e3cb90b2f47"
-  integrity sha512-nfCqbN19O4p2fzoeAHuuKgkLJgOaGFDjp7CcIkfIE20l+kpY1ujCkUTvJyQqGrz8aSjmSyUK/aNfqBpe/7Oyhg==
+"@jimengio/shared-utils@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@jimengio/shared-utils/-/shared-utils-0.1.0.tgz#56bc032f30aa258ae676384e3d5c514b5862ff61"
+  integrity sha512-d1UbYXPcRjsG2Cd9QW8XF3H9agtwTqmPkPh9tPJzIhKqVwYDJb4DHHIjiznLH2BPwDwwAQJp1XpybvsSaXTBtw==
   dependencies:
     emotion "*"
     immer "*"
