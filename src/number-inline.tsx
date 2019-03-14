@@ -7,6 +7,7 @@ import { rowParted, row, center, column } from "@jimengio/shared-utils";
 import { numberOrEmpty } from "./utils/number";
 import { scrollToElement } from "./utils/dom";
 import { lingual } from "./lingual";
+import { showInfoAlertMessage } from "./message/message-center";
 // import { showInfoAlertMessage } from "controllers/alert-message";
 
 interface IProps {
@@ -59,8 +60,7 @@ export default class NumberInline extends React.Component<IProps, IState> {
 
   onEdit = async () => {
     if (this.props.disabled) {
-      // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
-      console.warn("TODO");
+      showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
       return;
     }
     await this.immerState((state) => {

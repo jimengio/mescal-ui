@@ -9,6 +9,7 @@ import ThinButton from "./thin-button";
 import { numberOrEmpty } from "./utils/number";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Lingual, lingual } from "./lingual";
+import { showInfoAlertMessage } from "./message/message-center";
 
 interface IProps {
   value: number;
@@ -50,8 +51,7 @@ export default class NumberPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.state.isEditing ? styleOutline : null, this.props.disabled ? styleDisabled : null)}
         onClick={async () => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
-            console.warn("TODO");
+            showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             return;
           }
           await this.immerState((state) => {

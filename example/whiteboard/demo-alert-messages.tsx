@@ -5,6 +5,8 @@ import { routeBack } from "../controller/generated-router";
 import Space from "../../src/space";
 import ThinButton from "../../src/thin-button";
 import { EAlertMessageKind } from "../../src/models/alert-message";
+import loremIpsum from "lorem-ipsum";
+import { showAlertMessage } from "../../src/message/message-center";
 
 interface IProps {}
 
@@ -54,15 +56,14 @@ export default class DemoAlertMessages extends React.Component<IProps, IState> {
   }
 
   onShowMessage(x: EAlertMessageKind) {
-    // showAlertMessage({
-    //   kind: x,
-    //   text: loremIpsum({
-    //     count: Math.floor(Math.random() * 24),
-    //     units: "words",
-    //   }),
-    //   duration: 4,
-    // });
-    console.log("TODO");
+    showAlertMessage({
+      kind: x,
+      text: loremIpsum({
+        count: Math.floor(Math.random() * 24),
+        units: "words",
+      }),
+      duration: 4,
+    });
   }
 }
 

@@ -7,6 +7,7 @@ import Space from "./space";
 import ThinButton from "./thin-button";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Lingual, lingual } from "./lingual";
+import { showInfoAlertMessage } from "./message/message-center";
 
 interface IProps {
   value: string;
@@ -44,8 +45,7 @@ export default class TextareaPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.props.disabled ? styleDisabled : null, this.state.isEditing ? styleOutline : null)}
         onClick={async () => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
-            console.warn("TODO");
+            showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             return;
           }
           await this.immerState((state) => {

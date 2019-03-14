@@ -9,6 +9,7 @@ import ThinButton from "./thin-button";
 import FaIcon, { IconName } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Lingual, formatString, lingual } from "./lingual";
+import { showInfoAlertMessage } from "./message/message-center";
 // import { showInfoAlertMessage } from "controllers/alert-message";
 
 let found = (x: string, y: string) => {
@@ -62,8 +63,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.state.isEditing ? styleOutline : null, this.props.disabled ? styleDisabled : null)}
         onClick={() => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
-            console.warn("TODOFv");
+            showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             return;
           }
           this.immerState((state) => {

@@ -10,6 +10,7 @@ import FaIcon, { IconName } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Id } from "./models/types";
 import { Lingual, lingual } from "./lingual";
+import { showInfoAlertMessage } from "./message/message-center";
 
 // folding tree component
 
@@ -143,8 +144,7 @@ export default class TreeSelectPopup extends React.Component<IProps, IState> {
         className={cx(styleContainer, this.state.isEditing ? styleOutline : null, this.props.disabled ? styleDisabled : null)}
         onClick={() => {
           if (this.props.disabled) {
-            // showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
-            console.warn("TODO");
+            showInfoAlertMessage(this.props.disabledMessage || lingual.inputIsDisabled);
             return;
           }
           this.immerState((state) => {
