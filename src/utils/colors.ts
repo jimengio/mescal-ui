@@ -11,7 +11,7 @@ export const grayColor = "#828282";
 export const darkGrayColor = "#333";
 
 export enum EColorScheme {
-  Purple = "#45628f",
+  Purple = "hsla(215, 100%, 35%, 1)",
   White = "white",
   Empty = "#ccc",
 }

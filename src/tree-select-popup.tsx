@@ -8,7 +8,7 @@ import Space from "./space";
 import ThinButton from "./thin-button";
 import FaIcon, { IconName } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
-import { Id } from "models/types";
+import { Id } from "./models/types";
 
 // folding tree component
 

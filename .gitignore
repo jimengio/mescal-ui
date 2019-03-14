@@ -9,3 +9,7 @@ webpack/dll/*
 .DS_Store
 *.swp
 *.log
+
+lib/
+
+yarn-error.log

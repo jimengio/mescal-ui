@@ -1,8 +1,9 @@
 {
-  "name": "mst-workflow",
-  "version": "1.0.0",
+  "name": "@jimengio/mescal-ui",
+  "version": "0.1.0-a2",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "dev": "webpack-dev-server --hot --config webpack/dev.js",
     "watch": "webpack-dev-server --hot --config webpack/dev.js",
@@ -11,6 +12,8 @@
     "release": "rm -rfv dist/* && yarn dll-release && time webpack --progress --config webpack/release.js",
     "build": "yarn release",
     "serve": "http-server dist/ -s",
+    "compile": "tsc -d --project tsconfig-compile.json --outDir lib/",
+    "prepublish": "yarn compile",
     "postinstall": "rm -rfv node_modules/@types/*/node_modules/@types/react"
   },
   "keywords": [],

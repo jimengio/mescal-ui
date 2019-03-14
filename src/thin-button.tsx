@@ -1,6 +1,7 @@
 import React from "react";
 import { css, cx } from "emotion";
 import { center } from "@jimengio/shared-utils";
+import { EColorScheme } from "./utils/colors";
 
 interface IProps {
   text?: string;
@@ -41,10 +42,9 @@ export default class ThinButton extends React.Component<IProps, IState> {
 
 const styleButton = css`
   display: inline-flex;
-  border: 1px solid #184478;
+  border: 1px solid ${EColorScheme.Purple};
   background-color: white;
   outline: none;
-  border-radius: 4px;
   height: 32px;
   min-width: 96px;
   font-size: 14px;
@@ -52,7 +52,7 @@ const styleButton = css`
 `;
 
 const stylePrimary = css`
-  background-color: #45628f;
+  background-color: ${EColorScheme.Purple};
   color: white;
 `;
 
