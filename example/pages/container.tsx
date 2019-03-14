@@ -2,8 +2,6 @@ import React from "react";
 import { parseRoutePath, IRouteParseResult } from "@jimengio/ruled-router";
 import { css } from "emotion";
 
-import Home from "./home";
-import Content from "./content";
 import WhiteboardPortal from "../whiteboard/portal";
 
 const renderChildPage = (routerTree: IRouteParseResult) => {
@@ -11,12 +9,7 @@ const renderChildPage = (routerTree: IRouteParseResult) => {
 };
 
 export default (props) => {
-  return (
-    <div className={styleContainer}>
-      <div className={styleTitle}>Container</div>
-      {renderChildPage(props.router)}
-    </div>
-  );
+  return <div className={styleContainer}>{renderChildPage(props.router)}</div>;
 };
 
 const styleContainer = css`

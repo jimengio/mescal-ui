@@ -1,5 +1,3 @@
-type Id = string;
-
 export function switchPath(x: string) {
   location.hash = `#${x}`;
 }
