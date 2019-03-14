@@ -29,18 +29,17 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
   render() {
     let { router } = this.props;
 
-    let routePage = genRouter.whiteboard;
+    let routePage = genRouter;
 
-    if (router == null) {
+    if (router.name === Nav.Home) {
       return (
         <div className={cx(fullscreen, column)}>
           <div className={styleToolbar}>
-            <a onClick={genRouter.home.go}>{"Back"}</a>
+            <a onClick={genRouter._.go}>{"Back"}</a>
           </div>
           <div className={cx(flex, styleContainer)}>
             <div className={styleTitle}>Pinned</div>
             {this.renderEntry("Tabs bar", routePage.tabsBar.go)}
-            {this.renderEntry("Plan form table", routePage.planDetailTable.go)}
             {this.renderEntry("Data entry row", routePage.dataEntryRow.go)}
 
             <div className={styleTitle}>Components</div>
@@ -60,9 +59,7 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
 
             <div className={styleTitle}>Misc</div>
 
-            {this.renderEntry("Uploader", routePage.uploader.go)}
             {this.renderEntry("QR Code", routePage.qrcode.go)}
-            {this.renderEntry("SIP examples", routePage.SIPExamples.go)}
           </div>
         </div>
       );

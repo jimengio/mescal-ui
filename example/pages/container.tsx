@@ -7,17 +7,7 @@ import Content from "./content";
 import WhiteboardPortal from "../whiteboard/portal";
 
 const renderChildPage = (routerTree: IRouteParseResult) => {
-  if (routerTree != null) {
-    switch (routerTree.name) {
-      case "home":
-        return <Home />;
-      case "content":
-        return <Content />;
-      case "whiteboard":
-        return <WhiteboardPortal router={routerTree.next} />;
-    }
-  }
-  return <div>NOTHING</div>;
+  return <WhiteboardPortal router={routerTree} />;
 };
 
 export default (props) => {
