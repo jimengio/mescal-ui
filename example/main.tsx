@@ -2,6 +2,8 @@ import ReactDOM, { unstable_renderSubtreeIntoContainer } from "react-dom";
 import React from "react";
 import "./main.css";
 
+import "antd-mobile/dist/antd-mobile.css";
+
 import { parseRoutePath, IRouteParseResult } from "@jimengio/ruled-router";
 
 import { routerRules } from "./models/router-rules";
