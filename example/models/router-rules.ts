@@ -40,7 +40,10 @@ export enum Nav {
   DemoButtons = "buttons",
   DemoPlaceholder = "placeholders",
   DemoAlertMessages = "alert-messages",
-  DemoTransferMaterialCard = "transfer-material-card",
+
+  DemoSwitchOkNg = "switch-ok-ng",
+  DemoNavigatorPage = "navigator-page",
+  DemoNavigatorSelect = "navigator-select",
 }
 
 export const routerRules: IRouteRule[] = [
@@ -55,8 +58,10 @@ export const routerRules: IRouteRule[] = [
   { path: Nav.DemoButtons },
   { path: Nav.DemoPlaceholder },
   { path: Nav.DemoAlertMessages },
-  { path: Nav.DemoTransferMaterialCard },
   { path: Nav.DemoTabsBar },
+  { path: Nav.DemoSwitchOkNg },
+  { path: Nav.DemoNavigatorPage },
+  { path: Nav.DemoNavigatorSelect },
   { path: "", name: Nav.Home },
 ];
 

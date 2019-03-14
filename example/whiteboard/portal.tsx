@@ -18,6 +18,9 @@ import DemoAlertMessages from "./demo-alert-messages";
 import { genRouter } from "../controller/generated-router";
 import WhiteboardDemoInputsInline from "./demo-inputs-inine";
 import DemoTrees from "./demo-trees";
+import { DemoSwitchOkNg } from "./demo-switch-ok-ng";
+import { DemoNavigatorPage } from "./demo-navigator-page";
+import { DemoNavigatorSelect } from "./demo-navigator-select";
 
 interface IProps {
   router: IRouteParseResult;
@@ -51,7 +54,9 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
             {this.renderEntry("Buttons", routePage.buttons.go)}
             {this.renderEntry("Placeholders", routePage.placeholders.go)}
             {this.renderEntry("Alert messages", routePage.alertMessages.go)}
-            {this.renderEntry("Transfer material card", routePage.transferMaterialCard.go)}
+            {this.renderEntry("Switch Ok Ng", routePage.switchOkNg.go)}
+            {this.renderEntry("Navigator Page", routePage.navigatorPage.go)}
+            {this.renderEntry("Navigator Select", routePage.navigatorSelect.go)}
 
             <div className={styleTitle}>Tables</div>
 
@@ -89,6 +94,12 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
           return <DemoPlaceholder />;
         case Nav.DemoAlertMessages:
           return <DemoAlertMessages />;
+        case Nav.DemoSwitchOkNg:
+          return <DemoSwitchOkNg />;
+        case Nav.DemoNavigatorPage:
+          return <DemoNavigatorPage />;
+        case Nav.DemoNavigatorSelect:
+          return <DemoNavigatorSelect />;
         default:
           return <div>{`Invalid router name: ${router.name}`}</div>;
       }

@@ -75,17 +75,29 @@ export let genRouter = {
     path: () => `/alert-messages`,
     go: () => switchPath(`/alert-messages`),
   },
-  transferMaterialCard: {
-    name: "transfer-material-card",
-    raw: "transfer-material-card",
-    path: () => `/transfer-material-card`,
-    go: () => switchPath(`/transfer-material-card`),
-  },
   tabsBar: {
     name: "tabs-bar",
     raw: "tabs-bar",
     path: () => `/tabs-bar`,
     go: () => switchPath(`/tabs-bar`),
+  },
+  switchOkNg: {
+    name: "switch-ok-ng",
+    raw: "switch-ok-ng",
+    path: () => `/switch-ok-ng`,
+    go: () => switchPath(`/switch-ok-ng`),
+  },
+  navigatorPage: {
+    name: "navigator-page",
+    raw: "navigator-page",
+    path: () => `/navigator-page`,
+    go: () => switchPath(`/navigator-page`),
+  },
+  navigatorSelect: {
+    name: "navigator-select",
+    raw: "navigator-select",
+    path: () => `/navigator-select`,
+    go: () => switchPath(`/navigator-select`),
   },
   _: {
     name: "home",
