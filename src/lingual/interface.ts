@@ -8,9 +8,11 @@ export interface ILang {
   inputIsDisabled: string;
   inputManually: string;
   loading: string;
+  ng: string;
   noCandidates: string;
   noData: string;
   nothingToSelect: string;
+  ok: string;
   pickNow: string;
   pleaseAddDigits: string;
   pleaseInput: string;
