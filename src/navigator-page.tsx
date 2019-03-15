@@ -1,4 +1,5 @@
-import React, { SFC } from "react";
+import React, { SFC, useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { css } from "emotion";
 
@@ -9,24 +10,44 @@ interface IProps {
   onClose: () => void;
 }
 
-let NavigatorPage: SFC<IProps> = (props) => {
-  return (
-    <div>
-      <TransitionGroup className={styleAnimations}>
-        {props.visible ? (
-          <CSSTransition classNames="backdrop" timeout={{ enter: transitionDuration, exit: transitionDuration }}>
-            <div className={styleBackdrop} />
-          </CSSTransition>
-        ) : null}
-        {props.visible ? (
-          <CSSTransition classNames="slider" timeout={{ enter: transitionDuration, exit: transitionDuration }}>
-            <div className={stylePopPage}>{props.children}</div>
-          </CSSTransition>
-        ) : null}
-      </TransitionGroup>
-    </div>
-  );
-};
+export default class NavigatorPage extends React.Component<IProps, any> {
+  el: HTMLDivElement;
+  constructor(props) {
+    super(props);
+
+    this.el = document.createElement("div");
+  }
+
+  componentDidMount() {
+    let root = document.querySelector(".navigator-container");
+    root.appendChild(this.el);
+  }
+
+  componentWillUnmount() {
+    let root = document.querySelector(".navigator-container");
+    root.removeChild(this.el);
+  }
+
+  render() {
+    return ReactDOM.createPortal(
+      <div>
+        <TransitionGroup className={styleAnimations}>
+          {this.props.visible ? (
+            <CSSTransition classNames="backdrop" timeout={{ enter: transitionDuration, exit: transitionDuration }}>
+              <div className={styleBackdrop} />
+            </CSSTransition>
+          ) : null}
+          {this.props.visible ? (
+            <CSSTransition classNames="slider" timeout={{ enter: transitionDuration, exit: transitionDuration }}>
+              <div className={stylePopPage}>{this.props.children}</div>
+            </CSSTransition>
+          ) : null}
+        </TransitionGroup>
+      </div>,
+      this.el
+    );
+  }
+}
 
 let styleAnimations = css`
   .slider-enter {
@@ -78,5 +99,3 @@ let styleBackdrop = css`
   transition: ${transitionDuration}ms;
   transition-timing-function: linear;
 `;
-
-export default NavigatorPage;

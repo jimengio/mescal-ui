@@ -19,9 +19,7 @@ export default (props) => {
   );
 };
 
-const styleContainer = css`
-  font-family: "Helvetica";
-`;
+const styleContainer = css``;
 
 const styleTitle = css`
   margin-bottom: 16px;
