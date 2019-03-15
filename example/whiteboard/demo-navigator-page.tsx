@@ -14,16 +14,19 @@ let DemoNavigatorPage: SFC<IProps> = (props) => {
         onClose={() => {
           setVisible(false);
         }}
-      >
-        <div
-          className={styleContainer}
-          onClick={() => {
-            setVisible(false);
-          }}
-        >
-          Close
-        </div>
-      </NavigatorPage>
+        renderContent={() => {
+          return (
+            <div
+              className={styleContainer}
+              onClick={() => {
+                setVisible(false);
+              }}
+            >
+              Close
+            </div>
+          );
+        }}
+      />
 
       <div
         className={styleContainer}

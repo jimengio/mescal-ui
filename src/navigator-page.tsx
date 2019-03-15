@@ -1,4 +1,4 @@
-import React, { SFC, useEffect, useState } from "react";
+import React, { SFC, useEffect, useState, ReactNode } from "react";
 import ReactDOM from "react-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { css } from "emotion";
@@ -8,6 +8,7 @@ let transitionDuration = 160;
 interface IProps {
   visible: boolean;
   onClose: () => void;
+  renderContent: () => ReactNode;
 }
 
 export default class NavigatorPage extends React.Component<IProps, any> {
@@ -39,7 +40,7 @@ export default class NavigatorPage extends React.Component<IProps, any> {
           ) : null}
           {this.props.visible ? (
             <CSSTransition classNames="slider" timeout={{ enter: transitionDuration, exit: transitionDuration }}>
-              <div className={stylePopPage}>{this.props.children}</div>
+              <div className={stylePopPage}>{this.props.renderContent()}</div>
             </CSSTransition>
           ) : null}
         </TransitionGroup>
