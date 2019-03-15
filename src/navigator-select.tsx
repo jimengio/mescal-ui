@@ -1,5 +1,5 @@
 import React from "react";
 
-export function NavigatorSelect() {
+export default function NavigatorSelect() {
   return <div> implemented navigator-select </div>;
 }

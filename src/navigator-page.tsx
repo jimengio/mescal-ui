@@ -1,5 +1,5 @@
 import React from "react";
 
-export function NavigatorPage() {
+export default function NavigatorPage() {
   return <div> implemented navigator-page </div>;
 }

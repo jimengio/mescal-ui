@@ -19,6 +19,7 @@
     ]
   },
   "include": ["src/*.ts", "src/*.tsx", "src/*/*.ts"],
+  "exclude": ["lib/*"],
   "awesomeTypescriptLoaderOptions": {
     "useCache": true
   }
