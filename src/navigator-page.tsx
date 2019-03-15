@@ -31,7 +31,7 @@ export default class NavigatorPage extends React.Component<IProps, any> {
 
   render() {
     return ReactDOM.createPortal(
-      <div>
+      <div onClick={this.onContainerClick}>
         <TransitionGroup className={styleAnimations}>
           {this.props.visible ? (
             <CSSTransition classNames="backdrop" timeout={{ enter: transitionDuration, exit: transitionDuration }}>
@@ -47,6 +47,10 @@ export default class NavigatorPage extends React.Component<IProps, any> {
       </div>,
       this.el
     );
+  }
+
+  onContainerClick(event) {
+    event.stopPropagation();
   }
 }
 

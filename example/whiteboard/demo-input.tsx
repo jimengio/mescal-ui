@@ -14,6 +14,8 @@ import NumberPopup from "../../src/number-popup";
 import LabelFieldVertical from "../../src/label-field-vertical";
 import { Switch } from "antd-mobile";
 import FormSectionTitle from "../../src/form-section-title";
+import { materialSelectItems } from "../data/material-items";
+import SelectEntry from "../../src/select-entry";
 
 interface IProps {}
 
@@ -64,6 +66,8 @@ export default class WhiteboardDemoInput extends React.Component<IProps, IState>
           <ThinDivider />
           {this.renderSelectDemo()}
           <ThinDivider />
+          {this.renderSelectEntry()}
+          <ThinDivider />
           {this.renderSelectInputDemo()}
           <ThinDivider />
           {this.renderInputVerticalDemo()}
@@ -98,6 +102,24 @@ export default class WhiteboardDemoInput extends React.Component<IProps, IState>
           disabled={this.state.disabled}
           atRight={true}
           options={options}
+          onChange={(text: string) => {
+            this.immerState((state) => {
+              state.selected = text;
+            });
+          }}
+        />
+      </LabelField>
+    );
+  }
+
+  renderSelectEntry() {
+    return (
+      <LabelField label={"Navigator select"}>
+        <SelectEntry
+          value={this.state.selected}
+          disabled={this.state.disabled}
+          atRight={true}
+          options={materialSelectItems}
           onChange={(text: string) => {
             this.immerState((state) => {
               state.selected = text;
