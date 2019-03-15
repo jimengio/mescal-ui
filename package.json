@@ -15,6 +15,7 @@
     "lang-editor": "cd src/lingual/ && locales-editor",
     "compile": "tsc -d --project tsconfig-compile.json --outDir lib/",
     "prepublish": "yarn compile",
+    "upload": "rsync -avr --progress dist/ fe.jimu.io:~/repo/jimengio/mescal-ui",
     "postinstall": "rm -rfv node_modules/@types/*/node_modules/@types/react"
   },
   "keywords": [],
