@@ -11,7 +11,7 @@ interface IProps {
 
 interface IState {}
 
-export default class EmptyPlacehoder extends React.Component<IProps, IState> {
+export default class EmptyPlaceholder extends React.Component<IProps, IState> {
   constructor(props) {
     super(props);
 

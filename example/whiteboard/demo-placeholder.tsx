@@ -4,7 +4,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 import { routeBack } from "../controller/generated-router";
 import Space from "../../src/space";
 import LoadingPlaceholder from "../../src/loading-placeholder";
-import EmptyPlacehoder from "../../src/empty-placeholder";
+import EmptyPlaceholder from "../../src/empty-placeholder";
 
 interface IProps {}
 
@@ -29,7 +29,7 @@ export default class DemoPlaceholder extends React.Component<IProps, IState> {
         <Space height={16} />
         <LoadingPlaceholder />
         <Space height={16} />
-        <EmptyPlacehoder />
+        <EmptyPlaceholder />
       </div>
     );
   }

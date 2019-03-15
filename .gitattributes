@@ -1,2 +1,3 @@
 
-yarn.lock -diff
+yarn.lock -diff linguist-generated
+example/data/* -diff linguist-generated

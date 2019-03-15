@@ -20,7 +20,7 @@ import WhiteboardDemoInputsInline from "./demo-inputs-inine";
 import DemoInputRadio from "./demo-inputs-radio";
 import DemoTrees from "./demo-trees";
 import { DemoSwitchOkNg } from "./demo-switch-ok-ng";
-import { DemoNavigatorPage } from "./demo-navigator-page";
+import DemoNavigatorPage from "./demo-navigator-page";
 import { DemoNavigatorSelect } from "./demo-navigator-select";
 import DemoNavHeader from "./demo-nav-header";
 
