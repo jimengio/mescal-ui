@@ -60,6 +60,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-qr-reader": "^2.2.1",
+    "react-transition-group": "^2.6.1",
     "shortid": "^2.2.14"
   }
 }
