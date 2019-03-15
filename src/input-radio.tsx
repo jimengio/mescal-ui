@@ -49,17 +49,17 @@ interface IRadioBtnProps extends IRadioProps {
 }
 
 export function RadioBtn(props: IRadioBtnProps) {
-  const { activeColor, checked, disabled } = props;
+  const { activeColor, className, labelClassName, style, activeStyle, ...rset } = props;
   const customActiveStyle: CSSProperties = { background: activeColor, borderColor: activeColor };
   const checkedDisabledStyle: CSSProperties = { opacity: 0.6 };
 
   return (
     <Radio
-      className={cx(styleRadioBtnItem, props.disabled && styleDisableBtn)}
-      labelClassName={styleRadioBtn}
-      style={checked && disabled ? checkedDisabledStyle : {}}
+      className={cx(styleRadioBtnItem, props.disabled && styleDisableBtn, className)}
+      labelClassName={cx(styleRadioBtn, labelClassName)}
+      style={props.checked && props.disabled ? checkedDisabledStyle : {}}
       activeStyle={customActiveStyle}
-      {...props}
+      {...rset}
     />
   );
 }
@@ -70,14 +70,15 @@ interface IProps {
   options: InputRadioType[];
   disabled?: boolean;
   kind?: InputRadioKind;
+  className?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function InputRadio(props: IProps) {
-  const { name, value, options, disabled, kind, onChange } = props;
+  const { name, value, options, disabled, kind, className, onChange } = props;
 
   return (
-    <div className={styleContainer}>
+    <div className={cx(styleContainer, className)}>
       {kind === InputRadioKind.Button
         ? options.map((item, index) => (
             <RadioBtn
