@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import _ from "lodash";
 import { css } from "emotion";
 import NavigatorSelect from "../../src/navigator-select";
+import { materialSelectItems } from "../data/material-items";
 
 let options = _.range(80).map((idx) => {
   let x = `${_.range(idx)
@@ -32,7 +33,7 @@ export function DemoNavigatorSelect() {
         onCancel={() => {
           setVisible(false);
         }}
-        options={options}
+        options={materialSelectItems}
         onSelect={(x) => {
           console.log("selected", x);
           setVisible(false);

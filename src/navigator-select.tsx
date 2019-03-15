@@ -111,11 +111,15 @@ const styleHint = css`
 
 const styleList = css`
   overflow: auto;
-  padding-bottom: 44px;
+  padding-bottom: 60px;
 `;
 
 const styleItem = css`
-  height: 44px;
+  height: 60px;
   padding: 8px 12px;
   border-bottom: 1px solid rgba(245, 245, 245, 1);
+  width: 100%;
+  word-wrap: normal;
+  word-break: break-all;
+  font-size: 16px;
 `;
