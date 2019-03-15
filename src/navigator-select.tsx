@@ -4,7 +4,7 @@ import { css, cx } from "emotion";
 import { column, expand, rowMiddle } from "@jimengio/shared-utils";
 import NavHeader from "./nav-header";
 import LargeButton from "./large-button";
-import { lingual } from "./lingual";
+import { lingual, formatString } from "./lingual";
 import IconInput from "./icon-input";
 import { ISelectPopupItem } from "./select-popup";
 import EmptyPlaceholder from "./empty-placeholder";
@@ -19,10 +19,10 @@ interface IProps {
   onSelect: (x: string) => void;
 }
 
-let renderList = (props: IProps): ReactNode => {
+let renderList = (options: ISelectPopupItem[], props: IProps): ReactNode => {
   return (
     <div className={cx(expand, styleList)}>
-      {props.options.map((item) => {
+      {options.map((item) => {
         return (
           <div
             key={item.key}
@@ -42,6 +42,15 @@ let renderList = (props: IProps): ReactNode => {
 let NavigatorSelect: SFC<IProps> = (props) => {
   let [query, setQuery] = useState("");
 
+  let filteredOptions = props.options;
+  if (query.trim().length > 0) {
+    filteredOptions = filteredOptions.filter((item) => {
+      return (item.searchText || item.display).includes(query);
+    });
+  }
+
+  let emptyText = filteredOptions.length === 0 ? formatString(lingual.noMatchedResultsForX, { x: query }) : undefined;
+
   return (
     <NavigatorPage
       visible={props.visible}
@@ -56,7 +65,7 @@ let NavigatorSelect: SFC<IProps> = (props) => {
             </div>
             <div className={styleGray} />
 
-            {props.options.length === 0 ? <EmptyPlaceholder /> : renderList(props)}
+            {filteredOptions.length === 0 ? <EmptyPlaceholder text={emptyText} /> : renderList(filteredOptions, props)}
           </div>
         );
       }}

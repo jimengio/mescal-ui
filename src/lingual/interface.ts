@@ -4,13 +4,13 @@ export interface ILang {
   clear: string;
   confirm: string;
   defaultLabel: string;
-  httpRequired: string;
   inputIsDisabled: string;
   inputManually: string;
   loading: string;
   ng: string;
   noCandidates: string;
   noData: string;
+  noMatchedResultsForX: string;
   nothingToSelect: string;
   ok: string;
   pickNow: string;

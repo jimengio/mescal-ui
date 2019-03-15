@@ -14,6 +14,7 @@
   "ng" {"zhCN" "不合格", "enUS" "NG"}
   "noCandidates" {"zhCN" "没有可选项", "enUS" "No items"}
   "noData" {"zhCN" "没有数据", "enUS" "No data"}
+  "noMatchedResultsForX" {"zhCN" "没有内容匹配\"{x}\"", "enUS" "No matched results for \"{x}\""}
   "nothingToSelect" {"zhCN" "没有可选项", "enUS" "Nothing to select"}
   "ok" {"zhCN" "合格", "enUS" "OK"}
   "pickNow" {"zhCN" "定位到现在", "enUS" "Pick now"}
