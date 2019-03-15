@@ -49,7 +49,7 @@ interface IRadioBtnProps extends IRadioProps {
 }
 
 export function RadioBtn(props: IRadioBtnProps) {
-  const { activeColor, className, labelClassName, style, activeStyle, ...rset } = props;
+  const { activeColor, className, labelClassName, style, activeStyle, ...rest } = props;
   const customActiveStyle: CSSProperties = { background: activeColor, borderColor: activeColor };
   const checkedDisabledStyle: CSSProperties = { opacity: 0.6 };
 
@@ -59,7 +59,7 @@ export function RadioBtn(props: IRadioBtnProps) {
       labelClassName={cx(styleRadioBtn, labelClassName)}
       style={props.checked && props.disabled ? checkedDisabledStyle : {}}
       activeStyle={customActiveStyle}
-      {...rset}
+      {...rest}
     />
   );
 }
