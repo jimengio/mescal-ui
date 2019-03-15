@@ -19,7 +19,7 @@ interface IProps {
   onSelect: (x: string) => void;
 }
 
-let renderList = (options: ISelectPopupItem[], props: IProps): ReactNode => {
+let renderList = (options: ISelectPopupItem[], props: IProps, setQuery: (x: string) => void): ReactNode => {
   return (
     <div className={cx(expand, styleList)}>
       {options.map((item) => {
@@ -29,6 +29,7 @@ let renderList = (options: ISelectPopupItem[], props: IProps): ReactNode => {
             className={cx(rowMiddle, styleItem)}
             onClick={() => {
               props.onSelect(item.value);
+              setQuery("");
             }}
           >
             {item.display}
@@ -54,18 +55,33 @@ let NavigatorSelect: SFC<IProps> = (props) => {
   return (
     <NavigatorPage
       visible={props.visible}
-      onClose={props.onCancel}
+      onClose={() => {
+        props.onCancel();
+        setQuery("");
+      }}
       renderContent={() => {
         return (
           <div className={cx(column, styleFullSize)}>
-            <NavHeader title={props.title || lingual.pleaseSelect} leftChild={<span onClick={props.onCancel}>{lingual.cancel}</span>} />
+            <NavHeader
+              title={props.title || lingual.pleaseSelect}
+              leftChild={
+                <span
+                  onClick={() => {
+                    props.onCancel();
+                    setQuery("");
+                  }}
+                >
+                  {lingual.cancel}
+                </span>
+              }
+            />
             <div className={cx(column, styleControlArea)}>
               <IconInput value={query} onChange={setQuery} />
               <div className={styleHint}>{props.hint || lingual.pleaseSelect}</div>
             </div>
             <div className={styleGray} />
 
-            {filteredOptions.length === 0 ? <EmptyPlaceholder text={emptyText} /> : renderList(filteredOptions, props)}
+            {filteredOptions.length === 0 ? <EmptyPlaceholder text={emptyText} /> : renderList(filteredOptions, props, setQuery)}
           </div>
         );
       }}
