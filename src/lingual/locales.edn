@@ -7,12 +7,15 @@
   "clear" {"zhCN" "清除", "enUS" "Clear"}
   "confirm" {"zhCN" "确认", "enUS" "Confirm"}
   "defaultLabel" {"zhCN" "默认标签", "enUS" "Default label"}
+  "httpRequired" {"zhCN" "必填", "enUS" "Required"}
   "inputIsDisabled" {"zhCN" "输入框被禁用", "enUS" "Input is disabled"}
   "inputManually" {"zhCN" "手动输入", "enUS" "Input manually"}
   "loading" {"zhCN" "加载中", "enUS" "Loading"}
+  "ng" {"zhCN" "不合格", "enUS" "NG"}
   "noCandidates" {"zhCN" "没有可选项", "enUS" "No items"}
   "noData" {"zhCN" "没有数据", "enUS" "No data"}
   "nothingToSelect" {"zhCN" "没有可选项", "enUS" "Nothing to select"}
+  "ok" {"zhCN" "合格", "enUS" "OK"}
   "pickNow" {"zhCN" "定位到现在", "enUS" "Pick now"}
   "pleaseAddDigits" {"zhCN" "请输入数字", "enUS" "Please add digits"}
   "pleaseInput" {"zhCN" "请输入", "enUS" "Please input"}
