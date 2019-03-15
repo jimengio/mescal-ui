@@ -3,6 +3,7 @@ import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import JimoIcon, { EJimoIcon } from "@jimengio/jimo-icons";
 import { center } from "@jimengio/shared-utils";
+import { EColorScheme } from "./utils/colors";
 
 interface IProps {
   icon: EJimoIcon;
@@ -36,7 +37,7 @@ const styleButton = css`
   height: 48px;
   bottom: 18px;
   left: calc(50% - 24px);
-  background-color: rgba(69, 98, 143, 1);
+  background-color: ${EColorScheme.Purple};
   border-radius: 50%;
   color: white;
   font-size: 16px;
