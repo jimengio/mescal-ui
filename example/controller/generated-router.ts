@@ -27,6 +27,12 @@ export let genRouter = {
     path: () => `/inputs-inline`,
     go: () => switchPath(`/inputs-inline`),
   },
+  inputsRadio: {
+    name: "inputs-radio",
+    raw: "inputs-radio",
+    path: () => `/inputs-radio`,
+    go: () => switchPath(`/inputs-radio`),
+  },
   range: {
     name: "range",
     raw: "range",

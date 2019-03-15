@@ -17,6 +17,7 @@ import DemoPlaceholder from "./demo-placeholder";
 import DemoAlertMessages from "./demo-alert-messages";
 import { genRouter } from "../controller/generated-router";
 import WhiteboardDemoInputsInline from "./demo-inputs-inine";
+import DemoInputRadio from "./demo-inputs-radio";
 import DemoTrees from "./demo-trees";
 import { DemoSwitchOkNg } from "./demo-switch-ok-ng";
 import { DemoNavigatorPage } from "./demo-navigator-page";
@@ -49,6 +50,7 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
             <div className={styleTitle}>Components</div>
             {this.renderEntry("Inputs", routePage.inputs.go)}
             {this.renderEntry("Inputs Inline", routePage.inputsInline.go)}
+            {this.renderEntry("Inputs radio", routePage.inputsRadio.go)}
             {this.renderEntry("Trees", routePage.trees.go)}
             {this.renderEntry("Progress", routePage.progress.go)}
             {this.renderEntry("Range picker", routePage.range.go)}
@@ -78,6 +80,8 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
           return <DemoTrees />;
         case Nav.DemoInputsInline:
           return <WhiteboardDemoInputsInline />;
+        case Nav.DemoInputsRadio:
+          return <DemoInputRadio />;
         case Nav.DemoRange:
           return <DemoRangePicker />;
         case Nav.DemoQrCode:
