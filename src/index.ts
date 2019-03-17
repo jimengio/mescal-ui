@@ -33,6 +33,12 @@ export { default as SelectSopup } from "./select-popup";
 export { default as TextareaPopup } from "./textarea-popup";
 export { default as TreeSelecPopup } from "./tree-select-popup";
 
+// Navigator
+
+export { default as NavigatorPage } from "./navigator-page";
+export { default as NavigatorSelect } from "./navigator-select";
+export { default as SelectEntry } from "./select-entry";
+
 // header
 
 export { default as NavHeader } from "./nav-header";
@@ -49,8 +55,6 @@ export { default as FormSectionTitle } from "./form-section-title";
 export { default as IconLabel } from "./icon-label";
 export { default as InputInline } from "./input-inline";
 export { default as LoadingPlaceholder } from "./loading-placeholder";
-export { default as NavigatorPage } from "./navigator-page";
-export { default as NavigatorSelect } from "./navigator-select";
 export { default as ProgressPercent } from "./progress-percent";
 export { default as RoughTable } from "./rough-table";
 export { default as SamplingCounter } from "./sampling-counter";

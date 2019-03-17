@@ -9,6 +9,10 @@ import IconInput from "./icon-input";
 import { ISelectPopupItem } from "./select-popup";
 import EmptyPlaceholder from "./empty-placeholder";
 
+let found = (x: string, y: string) => {
+  return x.toLocaleLowerCase().includes(y.trim().toLowerCase());
+};
+
 interface IProps {
   visible: boolean;
   title?: string;
@@ -46,7 +50,7 @@ let NavigatorSelect: SFC<IProps> = (props) => {
   let filteredOptions = props.options;
   if (query.trim().length > 0) {
     filteredOptions = filteredOptions.filter((item) => {
-      return (item.searchText || item.display).includes(query);
+      return found(item.searchText || item.display, query);
     });
   }
 
