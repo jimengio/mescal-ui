@@ -1,6 +1,6 @@
 {
   "name": "@jimengio/mescal-ui",
-  "version": "0.1.1-a3",
+  "version": "0.1.1-a4",
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
