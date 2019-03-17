@@ -114,7 +114,7 @@ const styleRadio = css`
   margin-left: 8px;
   cursor: pointer;
 
-  &:first-child {
+  &:first-of-type {
     margin-left: 0;
   }
 
