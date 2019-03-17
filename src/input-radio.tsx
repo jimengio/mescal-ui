@@ -111,7 +111,8 @@ const styleContainer = css``;
 
 const styleRadio = css`
   display: inline-block;
-  margin-left: 8px;
+  margin: 0 0 0 8px;
+  padding: 0;
   cursor: pointer;
 
   &:first-of-type {
@@ -147,7 +148,7 @@ const styleRadioItem = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 24px;
+  padding: 0 0 0 24px;
 
   &::after {
     content: "";
@@ -176,10 +177,11 @@ const styleDisableBtn = css`
 `;
 
 const styleRadioBtnItem = css`
-  padding: 4px 8px;
+  height: 30px;
+  min-width: 60px;
+  padding: 0 4px;
   border: 1px solid #ddd;
-  border-radius: 3px;
-  min-width: 72px;
+  border-radius: 4px;
   color: #bdbdbd;
   border-color: #bdbdbd;
   background: #fff;
