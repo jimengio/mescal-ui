@@ -39,9 +39,6 @@ export default class WhiteboardPortal extends React.Component<IProps, IState> {
     if (router.name === Nav.Home) {
       return (
         <div className={cx(fullscreen, column)}>
-          <div className={styleToolbar}>
-            <a onClick={genRouter._.go}>{"Back"}</a>
-          </div>
           <div className={cx(flex, styleContainer)}>
             <div className={styleTitle}>Pinned</div>
             {this.renderEntry("Tabs bar", routePage.tabsBar.go)}
@@ -140,10 +137,6 @@ const styleContainer = css`
   flex-wrap: wrap;
   overflow: auto;
   padding-bottom: 200px;
-`;
-
-const styleToolbar = css`
-  padding: 16px;
 `;
 
 const styleTitle = css`
