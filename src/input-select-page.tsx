@@ -69,8 +69,10 @@ let InputSelectPage: SFC<IProps> = (props) => {
         rightChild={
           <span
             onClick={() => {
-              props.onSelect(draft);
-              setDraft("");
+              if (draft != null && draft.trim() !== "") {
+                props.onSelect(draft);
+                setDraft("");
+              }
             }}
           >
             {lingual.confirm}
