@@ -23,6 +23,7 @@ interface IProps {
   maxPreviewWidth?: number;
   navigatorTitle?: string;
   navigatorHint?: string;
+  navigatorPlaceholder?: string;
 }
 
 interface IState {
@@ -115,6 +116,7 @@ export default class InputSelectEntry extends React.Component<IProps, IState> {
               value={this.props.value}
               title={this.props.navigatorTitle}
               hint={this.props.navigatorHint}
+              placeholder={this.props.navigatorPlaceholder}
               onCancel={() => {
                 this.mergeState({
                   isEditing: false,
