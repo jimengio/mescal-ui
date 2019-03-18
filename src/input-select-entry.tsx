@@ -7,21 +7,15 @@ import { lingual, formatString } from "./lingual";
 import Space from "./space";
 import FaIcon, { IconName } from "@jimengio/fa-icons";
 import { showInfoAlertMessage } from "./message/message-center";
-import NavigatorSelect from "./navigator-select";
-
-export interface ISelectPopupItem {
-  key?: string;
-  display: any;
-  value: any;
-  searchText?: string;
-}
+import { NavigatorPage } from ".";
+import InputSelectPage from "./input-select-page";
 
 interface IProps {
   value: string;
   guideText?: string;
   placeholder?: string;
   atRight?: boolean;
-  options: ISelectPopupItem[];
+  options: string[];
   onChange: (text: string) => void;
   disabled?: boolean;
   isLoading?: boolean;
@@ -36,7 +30,7 @@ interface IState {
   query: string;
 }
 
-export default class SelectEntry extends React.Component<IProps, IState> {
+export default class InputSelectEntry extends React.Component<IProps, IState> {
   inputEl: HTMLInputElement;
 
   constructor(props: IProps) {
@@ -103,34 +97,42 @@ export default class SelectEntry extends React.Component<IProps, IState> {
   }
 
   displayValue(value: string) {
-    let { options } = this.props;
-
-    let target = options.find((x) => x.value === value);
-
-    return target != null ? target.display : this.renderInvalid(value);
+    return value || this.renderInvalid(value);
   }
 
   renderEditor() {
     return (
-      <NavigatorSelect
+      <NavigatorPage
         visible={this.state.isEditing}
-        title={this.props.navigatorTitle}
-        hint={this.props.navigatorHint}
-        onCancel={() => {
+        onClose={() => {
           this.mergeState({
             isEditing: false,
           });
         }}
-        options={this.props.options}
-        onSelect={(x) => {
-          this.props.onChange(x);
-          this.mergeState({ isEditing: false });
+        renderContent={() => {
+          return (
+            <InputSelectPage
+              value={this.props.value}
+              title={this.props.navigatorTitle}
+              hint={this.props.navigatorHint}
+              onCancel={() => {
+                this.mergeState({
+                  isEditing: false,
+                });
+              }}
+              options={this.props.options}
+              onSelect={(x) => {
+                this.props.onChange(x);
+                this.mergeState({ isEditing: false });
+              }}
+            />
+          );
         }}
       />
     );
   }
 
-  renderInvalid(x) {
+  renderInvalid(x: string) {
     return <span className={styleInvalid}>{x}</span>;
   }
 }

@@ -66,6 +66,7 @@ export const routerRules: IRouteRule[] = [
   { path: Nav.DemoNavigatorPage },
   { path: Nav.DemoNavigatorSelect },
   { path: Nav.DemoNavHeader },
+  { path: "input-select-entry" },
   { path: "", name: Nav.Home },
 ];
 

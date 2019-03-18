@@ -111,6 +111,12 @@ export let genRouter = {
     path: () => `/nav-header`,
     go: () => switchPath(`/nav-header`),
   },
+  inputSelectEntry: {
+    name: "input-select-entry",
+    raw: "input-select-entry",
+    path: () => `/input-select-entry`,
+    go: () => switchPath(`/input-select-entry`),
+  },
   _: {
     name: "home",
     raw: "",

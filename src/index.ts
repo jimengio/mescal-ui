@@ -38,6 +38,7 @@ export { default as TreeSelecPopup } from "./tree-select-popup";
 export { default as NavigatorPage } from "./navigator-page";
 export { default as NavigatorSelect } from "./navigator-select";
 export { default as SelectEntry } from "./select-entry";
+export { default as InputSelectEntry } from "./input-select-entry";
 
 // header
 
@@ -67,3 +68,6 @@ export { default as ThinPagination } from "./thin-pagination";
 export { default as ThinProgress } from "./thin-progress";
 export { default as ThinSubmittingTable } from "./thin-submitting-table";
 export { default as TimeFormat } from "./time-format";
+
+// Internal components
+// export { default as InputSelectPage } from "./input-select-page";
