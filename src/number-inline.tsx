@@ -99,6 +99,8 @@ export default class NumberInline extends React.Component<IProps, IState> {
           // console.log("change", JSON.stringify(text), maybeNumber);
           if (maybeNumber != null) {
             this.props.onChange(maybeNumber);
+          } else {
+            this.props.onChange(text as any);
           }
         }}
         className={styleInput}
