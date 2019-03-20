@@ -11,7 +11,7 @@ export const zhCN: ILang = {
   ng: "不合格",
   noCandidates: "没有可选项",
   noData: "没有数据",
-  noMatchedResultsForX: '没有内容匹配"{x}"',
+  noMatchedResultsForX: '没有内容匹配 "{x}"',
   nothingToSelect: "没有可选项",
   ok: "合格",
   pickNow: "定位到现在",

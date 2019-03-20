@@ -27,5 +27,15 @@ export default function SwitchOkNg(props: IProps) {
     },
   ];
 
-  return <InputRadio name={name} kind={InputRadioKind.Button} options={options} onChange={(e) => onChange(e.target.value)} {...rest} />;
+  return (
+    <InputRadio
+      name={name}
+      kind={InputRadioKind.Button}
+      options={options}
+      onChange={(e) => {
+        onChange(e.target.value);
+      }}
+      {...rest}
+    />
+  );
 }

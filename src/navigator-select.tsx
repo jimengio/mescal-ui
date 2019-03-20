@@ -29,7 +29,7 @@ let renderList = (options: ISelectPopupItem[], props: IProps, setQuery: (x: stri
       {options.map((item) => {
         return (
           <div
-            key={item.key}
+            key={item.key || item.value}
             className={cx(rowMiddle, styleItem)}
             onClick={() => {
               props.onSelect(item.value);
@@ -54,7 +54,7 @@ let NavigatorSelect: SFC<IProps> = (props) => {
     });
   }
 
-  let emptyText = filteredOptions.length === 0 ? formatString(lingual.noMatchedResultsForX, { x: query }) : undefined;
+  let emptyText: string = props.options.length === 0 ? lingual.noData : formatString(lingual.noMatchedResultsForX, { x: query });
 
   return (
     <NavigatorPage
