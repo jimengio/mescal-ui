@@ -95,7 +95,8 @@ export default class NumberInline extends React.Component<IProps, IState> {
           this.immerState((state) => {
             state.draft = text;
           });
-          let maybeNumber = this.findNumber(this.state.draft);
+          let maybeNumber = this.findNumber(text);
+          // console.log("change", JSON.stringify(text), maybeNumber);
           if (maybeNumber != null) {
             this.props.onChange(maybeNumber);
           }
