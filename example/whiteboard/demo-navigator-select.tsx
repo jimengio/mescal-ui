@@ -29,7 +29,6 @@ export function DemoNavigatorSelect() {
       <NavigatorSelect
         visible={visible}
         title="TODO"
-        hint="TODO"
         onCancel={() => {
           setVisible(false);
         }}
