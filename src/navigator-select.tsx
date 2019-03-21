@@ -81,7 +81,7 @@ let NavigatorSelect: SFC<IProps> = (props) => {
             />
             <div className={cx(column, styleControlArea)}>
               <IconInput value={query} onChange={setQuery} />
-              <div className={styleHint}>{props.hint || lingual.pleaseSelect}</div>
+              {props.hint != null ? <div className={styleHint}>{props.hint}</div> : null}
             </div>
             <div className={styleGray} />
 
