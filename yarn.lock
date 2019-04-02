@@ -140,10 +140,10 @@
   dependencies:
     emotion "^9.2.6"
 
-"@jimengio/jimo-icons@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@jimengio/jimo-icons/-/jimo-icons-0.1.7.tgz#ba259c00b6942d4d2dc4156ccbf4b664b3dc8da3"
-  integrity sha512-30J0861HlJB2O7FCwScxolZjRpiA4E1Cwtq4kfhmrvMTETmXB95YDaWo0MzzIPKhIJwk8vIybU/CuYgTYy+P4A==
+"@jimengio/jimo-icons@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@jimengio/jimo-icons/-/jimo-icons-0.1.12.tgz#49324bcf40571bb5519a6711d7c6685f9538c80c"
+  integrity sha512-uxL7kaifrgX5+FUgG6E+XTquRQDDJeyY3OuvSbQ6+CuLVHM9Y5kBJLzwTtN9tXzA1PO6GdSJBYAboJPM7HL5rA==
 
 "@jimengio/rex@^0.1.1":
   version "0.1.1"
