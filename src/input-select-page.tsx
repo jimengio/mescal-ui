@@ -88,7 +88,7 @@ let InputSelectPage: SFC<IProps> = (props) => {
             setDraft(event.target.value);
           }}
         />
-        <div className={styleHint}>{props.hint || lingual.pleaseSelect}</div>
+        {props.hint != null ? <div className={styleHint}>{props.hint}</div> : null}
       </div>
       <div className={styleGray} />
 
