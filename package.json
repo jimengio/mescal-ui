@@ -1,6 +1,6 @@
 {
   "name": "@jimengio/mescal-ui",
-  "version": "0.1.6",
+  "version": "0.1.7-a1",
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -51,16 +51,16 @@
     "@jimengio/jimo-icons": "^0.1.12",
     "@jimengio/ruled-router": "^0.2.7",
     "@jimengio/shared-utils": "^0.1.1",
-    "antd-mobile": "^2.2.11",
+    "antd-mobile": "*",
     "dayjs": "*",
     "emotion": "*",
     "font-awesome": "^4.7.0",
     "immer": "*",
     "lodash": "*",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "*",
+    "react-dom": "*",
     "react-qr-reader": "^2.2.1",
-    "react-transition-group": "^2.9.0",
-    "shortid": "^2.2.14"
+    "react-transition-group": "*",
+    "shortid": "*"
   }
 }
