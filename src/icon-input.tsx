@@ -9,6 +9,7 @@ interface IProps {
   icon?: ReactNode;
   value: string;
   onChange: (text: string) => void;
+  onEnter?: () => void;
 }
 
 let IconInput: SFC<IProps> = (props) => {
@@ -22,6 +23,11 @@ let IconInput: SFC<IProps> = (props) => {
         value={props.value}
         onChange={(event) => {
           props.onChange(event.target.value);
+        }}
+        onKeyDown={(event) => {
+          if (event.keyCode === 13 && props.onEnter != null) {
+            props.onEnter();
+          }
         }}
       />
     </div>
