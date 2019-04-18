@@ -1,7 +1,7 @@
 import React, { SFC, useContext, ReactNode } from "react";
-import { zhCN } from "./zhCN";
+import { zhCN } from "./zh-cn";
 import { ILang } from "./interface";
-import { enUS } from "./enUS";
+import { enUS } from "./en-us";
 import { ISimpleObject } from "../models/types";
 
 // default locale is Chinese
