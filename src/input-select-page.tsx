@@ -87,6 +87,11 @@ let InputSelectPage: SFC<IProps> = (props) => {
           onChange={(event) => {
             setDraft(event.target.value);
           }}
+          onKeyDown={(event) => {
+            if (event.keyCode === 13) {
+              props.onSelect(draft);
+            }
+          }}
         />
         {props.hint != null ? <div className={styleHint}>{props.hint}</div> : null}
       </div>
