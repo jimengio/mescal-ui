@@ -1,7 +1,8 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-let HtmlIncludeAssetsPlugin = require("html-webpack-include-assets-plugin");
+let HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
+let ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 let { matchCssRule, matchFontsRule, matchTsRule } = require("./shared");
 let splitChunks = require("./split-chunks");
@@ -46,6 +47,7 @@ module.exports = {
     splitChunks: splitChunks,
   },
   plugins: [
+    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true, async: false }),
     new webpack.DllReferencePlugin({
       manifest: path.resolve(__dirname, "dll/manifest.json"),
     }),
@@ -54,8 +56,8 @@ module.exports = {
       filename: "index.html",
       template: "template.ejs",
     }),
-    new HtmlIncludeAssetsPlugin({
-      assets: [`dll/${dllManifest.name}.js`],
+    new HtmlWebpackTagsPlugin({
+      tags: [`dll/${dllManifest.name}.js`],
       append: false,
     }),
   ],
