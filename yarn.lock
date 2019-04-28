@@ -91,26 +91,22 @@
   resolved "https://registry.yarnpkg.com/@jimengio/fa-icons/-/fa-icons-0.1.11.tgz#f071b7d88a9b1f189943886be9396f6400dc243e"
   integrity sha512-jcBtzPD34VTosq1CZWAZCy9vMvZvtBlUI4HwHQ7bVnj4asJcDg1sOdn6WhrKHNNmPj3HI3RYeeS950tkc7Uwug==
 
-"@jimengio/jimo-icons@^0.1.14":
-  version "0.1.14"
-  resolved "https://registry.yarnpkg.com/@jimengio/jimo-icons/-/jimo-icons-0.1.14.tgz#c75c7b94ca981efa240d932333202f2f719a1895"
-  integrity sha512-lw22AKAbTJ8wzCbVJvq/0DGv/SuD5oyRfpEhLeZFKboOBcQFsRQH2WTHS2Mr9Tq3EvcLjAbFeyOojU8y2i6N5g==
+"@jimengio/jimo-icons@^0.1.17":
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/@jimengio/jimo-icons/-/jimo-icons-0.1.17.tgz#afc72d0d34ab3fa1788966d4d40eb69896ec26ad"
+  integrity sha512-LCBtXo6aNh1IF5uyq+6mWBA7BtFPgJBHtOr/AzB+I1nvHB0WskcIHY8vZZnYCejD0daCL7u/JFJSzYLVLVVU+g==
 
-"@jimengio/rex@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@jimengio/rex/-/rex-0.1.1.tgz#e2aa7e4b5685db82d0223f0c1f7d3f4f6912b6f3"
-  integrity sha512-bL7ZQnEfo9xwz2NMv47TDKL3VqEs64LRNj2jOOYTqrBfUjq77w7E2qWotROHDCME6/cywb7sIFFiaX1CHXAqLg==
+"@jimengio/rex@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@jimengio/rex/-/rex-0.1.2.tgz#b85a22c41eff1167139d79cd200bfdd0a669a052"
+  integrity sha512-bseK7TTqyGBE0WTTEh6wofWFpHLd/qG1FE9+WlFdyuWXIVo1B1uq7v6JA27pboIxBi1W2IAf0LdEB3RklE3CXg==
   dependencies:
-    immer "^2.1.1"
     shallowequal "*"
 
-"@jimengio/ruled-router@^0.2.7":
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/@jimengio/ruled-router/-/ruled-router-0.2.7.tgz#5ac98582644a346433d5779fb6c629538de966e8"
-  integrity sha512-CobzosO9EJsn1BCK8M9Nr6bU7Q93UpezyHXintaict3mi8wEgchjxWAgVPJ+rm1OuvNxO6I72S+LrWaRThiWYg==
-  dependencies:
-    immer "*"
-    lodash "*"
+"@jimengio/ruled-router@^0.2.8":
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/@jimengio/ruled-router/-/ruled-router-0.2.8.tgz#905005f3189be7a0ec7d82ae1552bf8357edb378"
+  integrity sha512-On7wNHG5rnBupVV0w/Sayr9YgUgdgYzFPZ+0cKl0dTg5GD8LrP9ZH/iM0D0xjTZe1KiUH/3bMpNrLJ9bjwpbUw==
 
 "@jimengio/shared-utils@^0.1.3":
   version "0.1.3"
@@ -1340,9 +1336,9 @@ date-now@^0.1.4:
   integrity sha1-6vQ5/U1ISK105cx9vvIAZyueNFs=
 
 dayjs@*:
-  version "1.8.12"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.12.tgz#f9610fb9b115aa2fe2a07e742c130df418cee76a"
-  integrity sha512-7keChCzzjU68sYJpk7kEI1Q9qbJyscyiW0STwEhqDFt+2js9pA/BSzmYE4PRxcMMoUMxNeY0TEMZHqV/JBR4OA==
+  version "1.8.13"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.13.tgz#51b5cdad23ba508bcea939a853b492fefb7fdc47"
+  integrity sha512-JZ01l/PMU8OqwuUs2mOQ/CTekMtoXOUSylfjqjgDzbhRSxpFIrPnHn8Y8a0lfocNgAdBNZb8y0/gbzJ2riQ4WQ==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -2030,11 +2026,6 @@ follow-redirects@^1.0.0:
   dependencies:
     debug "^3.2.6"
 
-font-awesome@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
-  integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
-
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -2504,7 +2495,7 @@ ignore-walk@^3.0.1:
   dependencies:
     minimatch "^3.0.4"
 
-immer@*, immer@^2.1.1:
+immer@*:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/immer/-/immer-2.1.5.tgz#0389947455c5a2c7a47f1e6f415c9d1a62a1ebed"
   integrity sha512-xyjQyTBYIeiz6jd02Hg12jV+9QISwF1crLcwTlzHpWH4e0ryNWj1kacpTwimK3bJV5NKKXw458G2vpqoB/inFA==
@@ -5147,10 +5138,10 @@ typescript-template-language-service-decorator@^2.2.0:
   resolved "https://registry.yarnpkg.com/typescript-template-language-service-decorator/-/typescript-template-language-service-decorator-2.2.0.tgz#4ee6d580f307fb9239978e69626f2775b8a59b2a"
   integrity sha512-xiolqt1i7e22rpqMaprPgSFVgU64u3b9n6EJlAaUYE61jumipKAdI1+O5khPlWslpTUj80YzjUKjJ2jxT0D74w==
 
-typescript@^3.4.3:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.3.tgz#0eb320e4ace9b10eadf5bc6103286b0f8b7c224f"
-  integrity sha512-FFgHdPt4T/duxx6Ndf7hwgMZZjZpB+U0nMNGVCYPq0rEzWKjEDobm4J6yb3CS7naZ0yURFqdw9Gwc7UOh/P9oQ==
+typescript@^3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
+  integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
 
 ua-parser-js@^0.7.18:
   version "0.7.19"
