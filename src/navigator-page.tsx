@@ -31,19 +31,14 @@ export default class NavigatorPage extends React.Component<IProps, any> {
 
   render() {
     return ReactDOM.createPortal(
-      <div onClick={this.onContainerClick}>
-        <TransitionGroup className={styleAnimations}>
-          {this.props.visible ? (
-            <CSSTransition classNames="backdrop" timeout={{ enter: transitionDuration, exit: transitionDuration }}>
-              <div className={styleBackdrop} />
-            </CSSTransition>
-          ) : null}
-          {this.props.visible ? (
-            <CSSTransition classNames="slider" timeout={{ enter: transitionDuration, exit: transitionDuration }}>
-              <div className={stylePopPage}>{this.props.renderContent()}</div>
-            </CSSTransition>
-          ) : null}
-        </TransitionGroup>
+      <div onClick={this.onContainerClick} className={styleAnimations}>
+        <CSSTransition in={this.props.visible} classNames="backdrop" timeout={transitionDuration} unmountOnExit>
+          <div className={styleBackdrop} />
+        </CSSTransition>
+
+        <CSSTransition in={this.props.visible} classNames="slider" timeout={transitionDuration} unmountOnExit>
+          <div className={stylePopPage}>{this.props.renderContent()}</div>
+        </CSSTransition>
       </div>,
       this.el
     );
