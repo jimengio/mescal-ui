@@ -151,6 +151,8 @@ const styleInput = css`
 const styleValue = css`
   white-space: nowrap;
   overflow: hidden;
+  /** render some height even exceptional empty values passed in */
+  min-height: 24px;
   text-overflow: ellipsis;
   min-width: 100px;
 `;
