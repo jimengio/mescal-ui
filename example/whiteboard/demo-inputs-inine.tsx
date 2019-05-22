@@ -85,18 +85,21 @@ export default class WhiteboardDemoInputsInline extends React.Component<IProps, 
 
   renderNumberInlineDemo() {
     return (
-      <LabelField label={"Basic number"} underline>
-        <NumberInline
-          value={this.state.size}
-          atRight={true}
-          disabled={this.state.disabled}
-          onChange={(x: number) => {
-            this.immerState((state) => {
-              state.size = x;
-            });
-          }}
-        />
-      </LabelField>
+      <>
+        <LabelField label={"Basic number"} underline>
+          <NumberInline
+            value={this.state.size}
+            atRight={true}
+            disabled={this.state.disabled}
+            onChange={(x: number) => {
+              this.immerState((state) => {
+                state.size = x;
+              });
+            }}
+          />
+        </LabelField>
+        <LabelField label={"value is:"}>{this.state.size}</LabelField>
+      </>
     );
   }
 
