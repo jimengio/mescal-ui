@@ -99,8 +99,12 @@ export default class NumberInline extends React.Component<IProps, IState> {
           // console.log("change", JSON.stringify(text), maybeNumber);
           if (maybeNumber != null) {
             this.props.onChange(maybeNumber);
+          } else if (text.trim() === "") {
+            // submit empty
+            // <input/> also returns empty string when value is invalid
+            this.props.onChange(null);
           } else {
-            this.props.onChange(text as any);
+            // do no submit invalid values
           }
         }}
         className={styleInput}
@@ -120,6 +124,12 @@ export default class NumberInline extends React.Component<IProps, IState> {
         state.isEditing = false;
       });
       this.props.onChange(maybeNumber);
+    } else {
+      // reset draft state if value is not valid
+      this.immerState((state) => {
+        state.isEditing = false;
+        state.draft = this.props.value as any;
+      });
     }
   };
 
