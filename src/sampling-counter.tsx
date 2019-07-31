@@ -2,7 +2,7 @@ import React from "react";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { column, rowParted, row, center } from "@jimengio/shared-utils";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import Space from "./space";
 
 interface IProps {
@@ -32,13 +32,13 @@ export default class SamplingCounter extends React.Component<IProps, IState> {
         <div>
           <FaIcon
             className={cx(styleIcon, selectedIndex === 0 || noSamples ? styleDisabled : null)}
-            name={IconName.AngleLeft}
+            name={EFaIcon.AngleLeft}
             onClick={this.onSelectPrevious}
           />
           <Space width={24} />
           <FaIcon
             className={cx(styleIcon, selectedIndex + 1 === sampleSize || noSamples ? styleDisabled : null)}
-            name={IconName.AngleRight}
+            name={EFaIcon.AngleRight}
             onClick={this.onSelectNext}
           />
         </div>

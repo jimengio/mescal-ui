@@ -6,7 +6,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 import { rowParted, row, center, flex, column } from "@jimengio/shared-utils";
 import Space from "./space";
 import ThinButton from "./thin-button";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Lingual, formatString, lingual } from "./lingual";
 import { showInfoAlertMessage } from "./message/message-center";
@@ -103,7 +103,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
           {content}
         </div>
         <Space width={8} />
-        <FaIcon name={IconName.AngleDown} />
+        <FaIcon name={EFaIcon.AngleDown} />
       </div>
     );
   }
@@ -234,7 +234,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
               });
             }}
           >
-            <FaIcon name={IconName.Eraser} />
+            <FaIcon name={EFaIcon.Eraser} />
           </span>
         )}
       </div>

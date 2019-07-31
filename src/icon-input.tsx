@@ -1,7 +1,7 @@
 import React, { SFC, ReactNode } from "react";
 import { css, cx } from "emotion";
 import { rowMiddle, expand } from "@jimengio/shared-utils";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import Space from "./space";
 import { lingual } from "./lingual";
 
@@ -15,7 +15,7 @@ interface IProps {
 let IconInput: SFC<IProps> = (props) => {
   return (
     <div className={cx(rowMiddle, styleContainer)}>
-      {props.icon || <FaIcon name={IconName.Search} className={styleIcon} />}
+      {props.icon || <FaIcon name={EFaIcon.Search} className={styleIcon} />}
       <Space width={8} />
       <input
         className={cx(expand, styleInput)}

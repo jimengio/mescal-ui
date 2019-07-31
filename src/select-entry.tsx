@@ -5,7 +5,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 
 import { lingual, formatString } from "./lingual";
 import Space from "./space";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { showInfoAlertMessage } from "./message/message-center";
 import NavigatorSelect from "./navigator-select";
 
@@ -97,7 +97,7 @@ export default class SelectEntry extends React.Component<IProps, IState> {
           {content}
         </div>
         <Space width={8} />
-        <FaIcon name={IconName.AngleDown} />
+        <FaIcon name={EFaIcon.AngleDown} />
       </div>
     );
   }

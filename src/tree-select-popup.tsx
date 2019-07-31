@@ -6,7 +6,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 import { rowParted, row, center, flex, column, rowMiddle } from "@jimengio/shared-utils";
 import Space from "./space";
 import ThinButton from "./thin-button";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Id } from "./models/types";
 import { Lingual, lingual } from "./lingual";
@@ -47,9 +47,9 @@ class TreeBranch extends React.Component<ITreeBranchProps, ITreeBranchState> {
           <div className={cx(rowMiddle, styleItem, item.value === this.props.value ? styleItemSelected : null)}>
             <div className={styleToggler} onClick={this.onToggleExpanded}>
               {item.children.length > 0 ? (
-                <FaIcon name={this.state.isExpanded ? IconName.AngleDown : IconName.AngleRight} />
+                <FaIcon name={this.state.isExpanded ? EFaIcon.AngleDown : EFaIcon.AngleRight} />
               ) : (
-                <FaIcon name={IconName.AngleDown} className={styleTogglerDisabled} />
+                <FaIcon name={EFaIcon.AngleDown} className={styleTogglerDisabled} />
               )}
             </div>
             <Space width={8} />
@@ -184,7 +184,7 @@ export default class TreeSelectPopup extends React.Component<IProps, IState> {
           {content}
         </div>
         <Space width={8} />
-        <FaIcon name={IconName.AngleDown} />
+        <FaIcon name={EFaIcon.AngleDown} />
       </div>
     );
   }

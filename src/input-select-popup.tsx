@@ -6,7 +6,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 import { rowParted, row, center, flex, column } from "@jimengio/shared-utils";
 import Space from "./space";
 import ThinButton from "./thin-button";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import ThinDivider from "./thin-divider";
 import { Lingual, lingual } from "./lingual";
@@ -73,7 +73,7 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
           <div className={styleValue} style={{ textAlign: atRight ? "right" : "left" }}>
             {this.displayValue()}
             <Space width={8} />
-            <FaIcon name={IconName.AngleDown} />
+            <FaIcon name={EFaIcon.AngleDown} />
           </div>
         ) : (
           <div className={styleEmpty} style={{ textAlign: atRight ? "right" : "left" }}>
@@ -85,7 +85,7 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
               <Lingual text="xCandidates" replaceData={{ x: options.length }} />
             )}
             <Space width={8} />
-            <FaIcon name={IconName.AngleDown} />
+            <FaIcon name={EFaIcon.AngleDown} />
           </div>
         )}
 

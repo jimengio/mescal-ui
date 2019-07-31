@@ -1,7 +1,7 @@
 import React from "react";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { row } from "@jimengio/shared-utils";
 
 import QrReader from "react-qr-reader";
@@ -38,7 +38,7 @@ export default class QrCodePopup extends React.Component<IProps, IState> {
           });
         }}
       >
-        <FaIcon name={IconName.Qrcode} />
+        <FaIcon name={EFaIcon.Qrcode} />
 
         {this.state.isEditing ? this.renderEditor() : null}
       </span>

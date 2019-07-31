@@ -2,7 +2,7 @@ import React from "react";
 import { css, cx } from "emotion";
 import { row, rowCenter, flex, column, center } from "@jimengio/shared-utils";
 import { Icon } from "antd-mobile";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 
 interface IProps {
@@ -35,7 +35,7 @@ export default class DataEntryRow extends React.Component<IProps, IState> {
         </div>
         {this.props.hideArrow ? null : (
           <div className={cx(center, styleIconContainer, styleArrow)}>
-            <FaIcon name={IconName.AngleRight} />
+            <FaIcon name={EFaIcon.AngleRight} />
           </div>
         )}
       </div>

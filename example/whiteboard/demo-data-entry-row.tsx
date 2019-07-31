@@ -4,7 +4,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 import { routeBack } from "../controller/generated-router";
 import Space from "../../src/space";
 import DataEntryRow from "../../src/data-entry-row";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 
 interface IProps {}
 
@@ -39,7 +39,7 @@ export default class DemoDataEntryRow extends React.Component<IProps, IState> {
   renderDemo() {
     return (
       <DataEntryRow
-        icon={<FaIcon name={IconName.Check} />}
+        icon={<FaIcon name={EFaIcon.Check} />}
         title="NC01 · 数控机床"
         hintText={
           <>

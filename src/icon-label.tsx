@@ -1,11 +1,11 @@
 import React from "react";
 import { css, cx } from "emotion";
-import FaIcon, { IconName } from "@jimengio/fa-icons";
+import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import Space from "./space";
 import { row } from "@jimengio/shared-utils";
 
 interface IProps {
-  icon: IconName;
+  icon: EFaIcon;
   label: string;
   onClick?: () => void;
   className?: string;
