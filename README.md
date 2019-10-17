@@ -1,6 +1,10 @@
 ## Mescal UI
 
+> Gathered UI components on mobile app in jimengio.
+
 ### Usage
+
+![](https://img.shields.io/npm/v/@jimengio/mescal-ui.svg?style=flat-square)
 
 ```bash
 npm install @jimengio/mescal-ui
