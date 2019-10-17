@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { css, cx } from "emotion";
 import { routeBack } from "../controller/generated-router";
-import Space from "../../src/space";
+import { Space } from "@jimengio/flex-styles";
 import SwitchOkNg from "../../src/switch-ok-ng";
 import { EJudgementResult } from "../../src/models/types";
 

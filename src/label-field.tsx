@@ -3,7 +3,7 @@ import _ from "lodash";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { rowParted, row, center } from "@jimengio/shared-utils";
-import Space from "./space";
+import { Space } from "@jimengio/flex-styles";
 import { Lingual } from "./lingual";
 
 interface IProps {

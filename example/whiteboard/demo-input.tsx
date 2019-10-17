@@ -3,7 +3,7 @@ import _ from "lodash";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { routeBack } from "../controller/generated-router";
-import Space from "../../src/space";
+import { Space } from "@jimengio/flex-styles";
 import InputPopup from "../../src/input-popup";
 import TextareaPopup from "../../src/textarea-popup";
 import ThinDivider from "../../src/thin-divider";

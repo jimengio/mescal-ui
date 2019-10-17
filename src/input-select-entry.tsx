@@ -4,7 +4,7 @@ import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 
 import { lingual, formatString } from "./lingual";
-import Space from "./space";
+import { Space } from "@jimengio/flex-styles";
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { showInfoAlertMessage } from "./message/message-center";
 import { NavigatorPage } from ".";

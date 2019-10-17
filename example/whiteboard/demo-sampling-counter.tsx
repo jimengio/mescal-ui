@@ -3,7 +3,7 @@ import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 
 import { routeBack } from "../controller/generated-router";
-import Space from "../../src/space";
+import { Space } from "@jimengio/flex-styles";
 import SamplingCounter from "../../src/sampling-counter";
 
 interface IProps {}

@@ -91,6 +91,11 @@
   resolved "https://registry.npm.taobao.org/@jimengio/fa-icons/download/@jimengio/fa-icons-0.2.0.tgz#50cfe599ee4c9ab70e780be4ddc6dc78d8bd33a8"
   integrity sha1-UM/lme5MmrcOeAvk3cbceNi9M6g=
 
+"@jimengio/flex-styles@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.npmjs.org/@jimengio/flex-styles/-/flex-styles-0.1.6.tgz#d37e37aa4a85c72feff386c27b920a5f8c5f6335"
+  integrity sha512-K5Ij+DrkQFgMc4MMWJOCsI8S26xUy6a1fe0JWEtQjwhrEGXwGv/w4coD19+uMcqtLO1HHasfN2NuoJNSh9g5ag==
+
 "@jimengio/jimo-icons@^0.1.19":
   version "0.1.22"
   resolved "https://registry.npm.taobao.org/@jimengio/jimo-icons/download/@jimengio/jimo-icons-0.1.22.tgz#acd62a56fc4a3b6cd2d3dcbaa16936de0678525f"

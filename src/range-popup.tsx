@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { DatePickerView } from "antd-mobile";
 import ThinButton from "./thin-button";
-import Space from "./space";
+import { Space } from "@jimengio/flex-styles";
 import { row, rowParted, column } from "@jimengio/shared-utils";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Lingual } from "./lingual";
