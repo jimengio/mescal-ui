@@ -8,10 +8,6 @@ export * from "./message/message-center";
 export { default as ThinButton } from "./thin-button";
 export { default as LargeButton } from "./large-button";
 
-// spaces
-
-export { default as Space } from "./space";
-
 // inline
 
 export { default as NumberInline } from "./number-inline";

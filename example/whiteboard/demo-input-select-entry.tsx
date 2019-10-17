@@ -1,7 +1,8 @@
 import React, { SFC, useState } from "react";
 import InputSelectPage from "../../src/input-select-page";
 import { css } from "emotion";
-import { Space, LabelField } from "../../src";
+import { LabelField } from "../../src";
+import { Space } from "@jimengio/flex-styles";
 import InputSelectEntry from "../../src/input-select-entry";
 
 interface IProps {}

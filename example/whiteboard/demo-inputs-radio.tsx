@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { routeBack } from "../controller/generated-router";
-import Space from "../../src/space";
+import { Space } from "@jimengio/flex-styles";
 import { EJimoIcon } from "@jimengio/jimo-icons";
 import InputRadio, { InputRadioKind } from "../../src/input-radio";
 

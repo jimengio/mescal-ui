@@ -5,7 +5,7 @@ import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-u
 import LabelField from "../../src/label-field";
 import TreeSelectPopup, { ITreeSelectPopupItem } from "../../src/tree-select-popup";
 import { routeBack } from "../controller/generated-router";
-import Space from "../../src/space";
+import { Space } from "@jimengio/flex-styles";
 
 interface IProps {}
 

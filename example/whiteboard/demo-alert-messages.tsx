@@ -2,7 +2,7 @@ import React from "react";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { routeBack } from "../controller/generated-router";
-import Space from "../../src/space";
+import { Space } from "@jimengio/flex-styles";
 import ThinButton from "../../src/thin-button";
 import { EAlertMessageKind } from "../../src/models/alert-message";
 import { loremIpsum } from "lorem-ipsum";

@@ -3,7 +3,7 @@ import _ from "lodash";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { rowParted, row, center, column } from "@jimengio/shared-utils";
-import Space from "./space";
+import { Space } from "@jimengio/flex-styles";
 import ThinButton from "./thin-button";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Lingual, lingual } from "./lingual";

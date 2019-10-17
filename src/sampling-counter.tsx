@@ -3,7 +3,7 @@ import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { column, rowParted, row, center } from "@jimengio/shared-utils";
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
-import Space from "./space";
+import { Space } from "@jimengio/flex-styles";
 
 interface IProps {
   selectedIndex: number;
