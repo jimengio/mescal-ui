@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { isEmpty, isString } from "lodash-es";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 
@@ -79,7 +79,7 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
           <div className={styleEmpty} style={{ textAlign: atRight ? "right" : "left" }}>
             {this.props.placeholder != null ? (
               this.props.placeholder
-            ) : _.isEmpty(options) ? (
+            ) : isEmpty(options) ? (
               <Lingual text="noCandidates" />
             ) : (
               <Lingual text="xCandidates" replaceData={{ x: options.length }} />
@@ -146,9 +146,9 @@ export default class InputSelectPopup extends React.Component<IProps, IState> {
             {this.props.options.length > 0
               ? this.props.options
                   .filter((option) => {
-                    if (_.isString(option.display)) {
+                    if (isString(option.display)) {
                       return found(option.display, this.state.draft);
-                    } else if (_.isString(option.searchText)) {
+                    } else if (isString(option.searchText)) {
                       return found(option.searchText, this.state.draft);
                     } else {
                       console.warn("No text content to search in", option);

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import _ from "lodash";
+import { isEmpty } from "lodash-es";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 
@@ -81,7 +81,7 @@ export default class SelectEntry extends React.Component<IProps, IState> {
       return this.renderValuePreview(styleValue, this.displayValue(value));
     } else if (placeholder != null) {
       return this.renderValuePreview(styleEmpty, placeholder);
-    } else if (_.isEmpty(options)) {
+    } else if (isEmpty(options)) {
       return this.renderValuePreview(styleEmpty, lingual.noCandidates);
     } else {
       return this.renderValuePreview(styleEmpty, formatString(lingual.xCandidates, { x: options.length }));

@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { range } from "lodash-es";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import LabelField from "../../src/label-field";
@@ -15,8 +15,8 @@ interface IState {
 }
 
 let generateTreeOptions = (n: number): ITreeSelectPopupItem[] => {
-  return _.range(10 - 2 * n).map((idx) => {
-    let x = `${_.range(idx)
+  return range(10 - 2 * n).map((idx) => {
+    let x = `${range(idx)
       .map(() => "a")
       .join("")}${idx}`;
     return {

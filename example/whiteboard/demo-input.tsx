@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { range } from "lodash-es";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { routeBack } from "../controller/generated-router";
@@ -86,8 +86,8 @@ export default class WhiteboardDemoInput extends React.Component<IProps, IState>
   }
 
   renderSelectDemo() {
-    let options = _.range(80).map((idx) => {
-      let x = `${_.range(idx)
+    let options = range(80).map((idx) => {
+      let x = `${range(idx)
         .map(() => "a")
         .join("")}${idx}`;
       return {
@@ -150,8 +150,8 @@ export default class WhiteboardDemoInput extends React.Component<IProps, IState>
   }
 
   renderSelectInputDemo() {
-    let options = _.range(80).map((idx) => {
-      let x = `${_.range(idx)
+    let options = range(80).map((idx) => {
+      let x = `${range(idx)
         .map(() => "a")
         .join("")}${idx}`;
       return {
@@ -177,8 +177,8 @@ export default class WhiteboardDemoInput extends React.Component<IProps, IState>
   }
 
   renderSelectVerticalDemo() {
-    let options = _.range(80).map((idx) => {
-      let x = `${_.range(idx)
+    let options = range(80).map((idx) => {
+      let x = `${range(idx)
         .map(() => "a")
         .join("")}${idx}`;
       return {

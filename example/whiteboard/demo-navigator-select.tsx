@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import _ from "lodash";
+import { range } from "lodash-es";
 import { css } from "emotion";
 import NavigatorSelect from "../../src/navigator-select";
 import { materialSelectItems } from "../data/material-items";
 
-let options = _.range(80).map((idx) => {
-  let x = `${_.range(idx)
+let options = range(80).map((idx) => {
+  let x = `${range(idx)
     .map(() => "a")
     .join("")}${idx}`;
   return {

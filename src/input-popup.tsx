@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { isEmpty } from "lodash-es";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 import { rowParted, row, center, column } from "@jimengio/shared-utils";
@@ -56,7 +56,7 @@ export default class InputPopup extends React.Component<IProps, IState> {
           this.inputEl.select();
         }}
       >
-        {!_.isEmpty(this.props.value) ? (
+        {!isEmpty(this.props.value) ? (
           <div className={cx(styleValue, this.props.useMonoFont ? styleMonoFont : null)} style={{ textAlign: atRight ? "right" : "left" }}>
             {this.props.value}
           </div>
