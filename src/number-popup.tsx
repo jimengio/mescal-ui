@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import { isFunction } from "lodash-es";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 
@@ -77,7 +77,7 @@ export default class NumberPopup extends React.Component<IProps, IState> {
   }
 
   renderEditor() {
-    let validation = _.isFunction(this.props.validate) ? this.props.validate(numberOrEmpty(this.state.draft)) : { ok: true, message: null };
+    let validation = isFunction(this.props.validate) ? this.props.validate(numberOrEmpty(this.state.draft)) : { ok: true, message: null };
 
     return (
       <div

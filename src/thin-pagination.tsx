@@ -1,4 +1,4 @@
-import _ from "lodash";
+import { range } from "lodash-es";
 import React from "react";
 import { css, cx } from "emotion";
 
@@ -37,7 +37,7 @@ export default class ThinPagination extends React.Component<IProps, any> {
     return (
       <div className={row}>
         {this.renderLeft()}
-        {_.range(count).map((i) => {
+        {range(count).map((i) => {
           return this.renderPage(i);
         })}
         {this.renderRight(count)}

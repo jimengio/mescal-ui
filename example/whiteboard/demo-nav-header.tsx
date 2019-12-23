@@ -1,7 +1,7 @@
 import React from "react";
 import NavHeader from "../../src/nav-header";
 import { column } from "@jimengio/shared-utils";
-import { Space } from "../../lib";
+import { Space } from "@jimengio/flex-styles";
 import { ArrowBack } from "../../src";
 import JimoIcon, { EJimoIcon } from "@jimengio/jimo-icons";
 

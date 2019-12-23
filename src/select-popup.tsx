@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import _ from "lodash";
+import { isEmpty, isString } from "lodash-es";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
 
@@ -87,7 +87,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
       return this.renderValuePreview(styleValue, this.displayValue(value));
     } else if (placeholder != null) {
       return this.renderValuePreview(styleEmpty, placeholder);
-    } else if (_.isEmpty(options)) {
+    } else if (isEmpty(options)) {
       return this.renderValuePreview(styleEmpty, <Lingual text="noCandidates" />);
     } else {
       return this.renderValuePreview(styleEmpty, <Lingual text="xCandidates" replaceData={{ x: options.length }} />);
@@ -167,9 +167,9 @@ export default class SelectPopup extends React.Component<IProps, IState> {
     if (this.props.options.length > 0) {
       return this.props.options
         .filter((option) => {
-          if (_.isString(option.display)) {
+          if (isString(option.display)) {
             return found(option.display, this.state.query);
-          } else if (_.isString(option.searchText)) {
+          } else if (isString(option.searchText)) {
             return found(option.searchText, this.state.query);
           } else {
             console.warn("No text content to search in", option);
@@ -225,7 +225,7 @@ export default class SelectPopup extends React.Component<IProps, IState> {
             });
           }}
         />
-        {_.isEmpty(this.state.query) ? null : (
+        {isEmpty(this.state.query) ? null : (
           <span
             className={styleEraser}
             onClick={() => {

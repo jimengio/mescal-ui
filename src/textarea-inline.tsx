@@ -1,7 +1,6 @@
 import React from "react";
 import { css, cx } from "emotion";
 import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
-import _ from "lodash";
 import { scrollToElement } from "./utils/dom";
 import { lingual } from "./lingual";
 
