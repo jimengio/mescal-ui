@@ -1,7 +1,7 @@
 import React from "react";
 import { css, cx } from "emotion";
 import produce from "immer";
-import { rowParted } from "@jimengio/shared-utils";
+import { rowParted } from "@jimengio/flex-styles";
 
 interface IProps {
   leftChild?: React.ReactElement<any>;

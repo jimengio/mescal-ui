@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { isEmpty } from "lodash-es";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 
 import { lingual, formatString } from "./lingual";
 import { Space } from "@jimengio/flex-styles";

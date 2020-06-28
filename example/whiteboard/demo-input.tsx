@@ -1,7 +1,7 @@
 import React from "react";
 import { range } from "lodash-es";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "../../src/utils/immer-helper";
 import { routeBack } from "../controller/generated-router";
 import { Space } from "@jimengio/flex-styles";
 import InputPopup from "../../src/input-popup";

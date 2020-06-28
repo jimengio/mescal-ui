@@ -1,6 +1,6 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "../../src/utils/immer-helper";
 import RangePopup from "../../src/range-popup";
 import { routeBack } from "../controller/generated-router";
 import { Space } from "@jimengio/flex-styles";

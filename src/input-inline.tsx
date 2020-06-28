@@ -1,6 +1,6 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 import { scrollToElement } from "./utils/dom";
 import { lingual } from "./lingual";
 

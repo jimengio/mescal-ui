@@ -1,7 +1,7 @@
 import React from "react";
 import { css, cx } from "emotion";
 import produce from "immer";
-import { column, flex, row } from "@jimengio/shared-utils";
+import { column, flex, row } from "@jimengio/flex-styles";
 
 interface IProps {
   footer: React.ReactElement<any>;

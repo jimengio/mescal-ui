@@ -3,7 +3,7 @@ import React from "react";
 import { css, cx } from "emotion";
 
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
-import { row, rowCenter } from "@jimengio/shared-utils";
+import { row, rowCenter } from "@jimengio/flex-styles";
 
 interface IProps {
   total: number;

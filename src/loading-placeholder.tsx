@@ -1,8 +1,8 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 import { ActivityIndicator } from "antd-mobile";
-import { center } from "@jimengio/shared-utils";
+import { center } from "@jimengio/flex-styles";
 
 interface IProps {
   className?: string;

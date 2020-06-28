@@ -1,10 +1,9 @@
 import React from "react";
 import { isFunction } from "lodash-es";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 
-import { rowParted, row, center, column } from "@jimengio/shared-utils";
-import { Space } from "@jimengio/flex-styles";
+import { Space, rowParted, row, center, column } from "@jimengio/flex-styles";
 import ThinButton from "./thin-button";
 import { numberOrEmpty } from "./utils/number";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";

@@ -2,7 +2,7 @@ import React from "react";
 import { css, cx } from "emotion";
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { Space } from "@jimengio/flex-styles";
-import { row } from "@jimengio/shared-utils";
+import { row } from "@jimengio/flex-styles";
 import { Lingual } from "./lingual";
 
 interface IProps {

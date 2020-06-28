@@ -1,9 +1,9 @@
 import React, { ReactNode, MouseEvent } from "react";
 import { isEmpty } from "lodash-es";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 
-import { rowParted, row, center, flex, column, rowMiddle } from "@jimengio/shared-utils";
+import { rowParted, row, center, flex, column, rowMiddle } from "@jimengio/flex-styles";
 import { Space } from "@jimengio/flex-styles";
 import ThinButton from "./thin-button";
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";

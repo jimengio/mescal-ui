@@ -1,7 +1,7 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
-import { column, rowParted, row, center } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
+import { column, rowParted, row, center } from "@jimengio/flex-styles";
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { Space } from "@jimengio/flex-styles";
 
@@ -30,11 +30,7 @@ export default class SamplingCounter extends React.Component<IProps, IState> {
     return (
       <div className={cx(rowParted, styleContainer)}>
         <div>
-          <FaIcon
-            className={cx(styleIcon, selectedIndex === 0 || noSamples ? styleDisabled : null)}
-            name={EFaIcon.AngleLeft}
-            onClick={this.onSelectPrevious}
-          />
+          <FaIcon className={cx(styleIcon, selectedIndex === 0 || noSamples ? styleDisabled : null)} name={EFaIcon.AngleLeft} onClick={this.onSelectPrevious} />
           <Space width={24} />
           <FaIcon
             className={cx(styleIcon, selectedIndex + 1 === sampleSize || noSamples ? styleDisabled : null)}

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { css, cx } from "emotion";
-import { center } from "@jimengio/shared-utils";
+import { center } from "@jimengio/flex-styles";
 import { EColorScheme } from "./utils/colors";
 import { Lingual } from "./lingual";
 

@@ -1,6 +1,6 @@
 import React, { SFC, ReactNode } from "react";
 import { css, cx } from "emotion";
-import { rowMiddle, expand } from "@jimengio/shared-utils";
+import { rowMiddle, expand } from "@jimengio/flex-styles";
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
 import { Space } from "@jimengio/flex-styles";
 import { lingual } from "./lingual";

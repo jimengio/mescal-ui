@@ -1,11 +1,11 @@
 import React from "react";
 import { css, cx } from "emotion";
 import dayjs from "dayjs";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 import { DatePickerView } from "antd-mobile";
 import ThinButton from "./thin-button";
 import { Space } from "@jimengio/flex-styles";
-import { row, rowParted, column } from "@jimengio/shared-utils";
+import { row, rowParted, column } from "@jimengio/flex-styles";
 import { shellStylePopupBackground, shellStylePopupCard } from "./styles/shell";
 import { Lingual } from "./lingual";
 

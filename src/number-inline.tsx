@@ -1,9 +1,9 @@
 import React from "react";
 import { isFunction } from "lodash-es";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 
-import { rowParted, row, center, column } from "@jimengio/shared-utils";
+import { rowParted, row, center, column } from "@jimengio/flex-styles";
 import { numberOrEmpty } from "./utils/number";
 import { scrollToElement } from "./utils/dom";
 import { lingual } from "./lingual";

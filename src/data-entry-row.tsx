@@ -1,9 +1,9 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { row, rowCenter, flex, column, center } from "@jimengio/shared-utils";
+import { row, rowCenter, flex, column, center } from "@jimengio/flex-styles";
 import { Icon } from "antd-mobile";
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 
 interface IProps {
   icon: React.ReactNode;

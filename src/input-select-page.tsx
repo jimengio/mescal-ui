@@ -1,7 +1,7 @@
 import React, { SFC, useState, ReactNode } from "react";
 import { NavHeader, EmptyPlaceholder } from ".";
 import { cx, css } from "emotion";
-import { column, expand, rowMiddle } from "@jimengio/shared-utils";
+import { column, expand, rowMiddle } from "@jimengio/flex-styles";
 import { lingual, formatString } from "./lingual";
 
 let found = (x: string, y: string) => {

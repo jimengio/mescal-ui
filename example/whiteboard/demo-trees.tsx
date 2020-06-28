@@ -1,7 +1,7 @@
 import React from "react";
 import { range } from "lodash-es";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "../../src/utils/immer-helper";
 import LabelField from "../../src/label-field";
 import TreeSelectPopup, { ITreeSelectPopupItem } from "../../src/tree-select-popup";
 import { routeBack } from "../controller/generated-router";

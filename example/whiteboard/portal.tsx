@@ -5,7 +5,7 @@ import { IRouteParseResult } from "@jimengio/ruled-router";
 
 import DemoInput from "./demo-input";
 import DemoRangePicker from "./demo-range-picker";
-import { center, row, fullscreen, column, flex } from "@jimengio/shared-utils";
+import { center, row, fullscreen, column, flex } from "@jimengio/flex-styles";
 import { Nav } from "../models/router-rules";
 import DemoQrCode from "./demo-qr-code";
 import DemoProgress from "./demo-progress";
