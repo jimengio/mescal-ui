@@ -1,6 +1,6 @@
 import React from "react";
 import NavHeader from "../../src/nav-header";
-import { column } from "@jimengio/shared-utils";
+import { column } from "@jimengio/flex-styles";
 import { Space } from "@jimengio/flex-styles";
 import { ArrowBack } from "../../src";
 import JimoIcon, { EJimoIcon } from "@jimengio/jimo-icons";

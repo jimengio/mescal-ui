@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import produce from "immer";
 import { css, cx } from "emotion";
-import { center } from "@jimengio/shared-utils";
+import { center } from "@jimengio/flex-styles";
 import { lingual } from "./lingual";
 
 interface IProps {

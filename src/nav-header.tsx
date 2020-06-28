@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
-import { rowParted, rowCenter } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
+import { rowParted, rowCenter } from "@jimengio/flex-styles";
 import { EColorScheme } from "./utils/colors";
 
 interface IProps {

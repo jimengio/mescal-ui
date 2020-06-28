@@ -1,7 +1,7 @@
 import React, { SFC, version, ReactNode, useState } from "react";
 import NavigatorPage from "./navigator-page";
 import { css, cx } from "emotion";
-import { column, expand, rowMiddle } from "@jimengio/shared-utils";
+import { column, expand, rowMiddle } from "@jimengio/flex-styles";
 import NavHeader from "./nav-header";
 import LargeButton from "./large-button";
 import { lingual, formatString } from "./lingual";

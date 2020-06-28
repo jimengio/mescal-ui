@@ -1,7 +1,7 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { center } from "@jimengio/shared-utils";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { center } from "@jimengio/flex-styles";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 import { Lingual } from "./lingual";
 
 interface IProps {

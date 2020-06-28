@@ -1,7 +1,6 @@
 import React, { CSSProperties } from "react";
 import { css, cx } from "emotion";
-import { center } from "@jimengio/shared-utils";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { center } from "@jimengio/flex-styles";
 import { EColorScheme } from "./utils/colors";
 
 declare type InputRadioValue = string | number;

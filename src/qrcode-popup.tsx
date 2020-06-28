@@ -1,8 +1,8 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
 import FaIcon, { EFaIcon } from "@jimengio/fa-icons";
-import { row } from "@jimengio/shared-utils";
+import { row } from "@jimengio/flex-styles";
 
 import QrReader from "react-qr-reader";
 import { shellStylePopupBackground } from "./styles/shell";

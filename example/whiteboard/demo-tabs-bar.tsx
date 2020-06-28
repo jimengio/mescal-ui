@@ -1,6 +1,6 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "../../src/utils/immer-helper";
 import { routeBack } from "../controller/generated-router";
 import { Space } from "@jimengio/flex-styles";
 import TabsBar, { ICandidate } from "../../src/tabs-bar";
@@ -17,7 +17,10 @@ export default class DemoTabsBar extends React.Component<IProps, IState> {
   constructor(props) {
     super(props);
 
-    let candidates = [{ value: "tasks", display: "任务" }, { value: "devices", display: "设备" }];
+    let candidates = [
+      { value: "tasks", display: "任务" },
+      { value: "devices", display: "设备" },
+    ];
 
     this.state = {
       candidates: candidates,

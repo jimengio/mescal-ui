@@ -1,6 +1,6 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { row, center } from "@jimengio/shared-utils";
+import { row, center } from "@jimengio/flex-styles";
 
 interface IProps {
   checked: boolean;

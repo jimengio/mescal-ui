@@ -1,7 +1,7 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "@jimengio/shared-utils";
-import { rowParted, row, center } from "@jimengio/shared-utils";
+import { immerHelpers, ImmerStateFunc, MergeStateFunc } from "./utils/immer-helper";
+import { rowParted, row, center } from "@jimengio/flex-styles";
 import { Space } from "@jimengio/flex-styles";
 import { Lingual } from "./lingual";
 
